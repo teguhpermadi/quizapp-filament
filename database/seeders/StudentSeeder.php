@@ -23,7 +23,7 @@ class StudentSeeder extends Seeder
 
         // give each student role
         $students->each(function (Student $student) {
-            $student->userable->userable()->assignRole('student');
+            $student->userable->user->assignRole('student');
         });
     }
 }

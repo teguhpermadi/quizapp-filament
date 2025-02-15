@@ -24,7 +24,8 @@ class TeacherSeeder extends Seeder
 
         // give each teacher role
         $teachers->each(function (Teacher $teacher) {        
-            $teacher->userable->userable()->assignRole('teacher');
+            $teacher->userable->user->assignRole('teacher');
         });
+
     }
 }
