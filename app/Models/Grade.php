@@ -13,4 +13,9 @@ class Grade extends Model
     use HasUlids;
 
     protected $guarded = [];
+
+    public function students()
+    {
+        return $this->belongsToMany(Student::class, 'student_grades');
+    }
 }
