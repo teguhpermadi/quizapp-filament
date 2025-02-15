@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Subject;
 use App\Models\Teacher;
 use App\Models\User;
 use App\Models\Userable;
@@ -26,6 +27,5 @@ class TeacherSeeder extends Seeder
         $teachers->each(function (Teacher $teacher) {        
             $teacher->userable->user->assignRole('teacher');
         });
-
     }
 }
