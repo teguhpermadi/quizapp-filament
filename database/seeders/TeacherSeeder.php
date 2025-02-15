@@ -21,5 +21,10 @@ class TeacherSeeder extends Seeder
                 return ['user_id' => User::factory()->create()->id];
             })
             ->create();
+
+        // give each teacher role
+        $teachers->each(function (Teacher $teacher) {        
+            $teacher->userable->userable()->assignRole('teacher');
+        });
     }
 }

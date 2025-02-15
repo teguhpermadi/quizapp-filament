@@ -20,5 +20,10 @@ class StudentSeeder extends Seeder
                 return ['user_id' => User::factory()->create()->id];
             })
             ->create();
+
+        // give each student role
+        $students->each(function (Student $student) {
+            $student->userable->userable()->assignRole('student');
+        });
     }
 }
