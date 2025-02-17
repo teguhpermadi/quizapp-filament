@@ -20,19 +20,19 @@ class Teacher extends Model
     }
     public function subjects()
     {
-        return $this->belongsToMany(Subject::class)
+        return $this->belongsToMany(Subject::class, 'subject_teacher_grade')
             ->withPivot('grade_id');
     }
 
     public function grades()
     {
-        return $this->belongsToMany(Grade::class)
+        return $this->belongsToMany(Grade::class, 'subject_teacher_grade')
             ->withPivot('subject_id');
     }
 
     public function lessons()
     {
-        return $this->belongsToMany(Lesson::class)
+        return $this->belongsToMany(Lesson::class, 'lesson_subject_teacher_grade')
             ->withPivot(['subject_id', 'grade_id']);
     }
 }
