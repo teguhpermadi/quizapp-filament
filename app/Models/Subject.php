@@ -13,4 +13,22 @@ class Subject extends Model
     use HasUlids;
 
     protected $guarded = [];
+
+    public function teachers()
+    {
+        return $this->belongsToMany(Teacher::class)
+            ->withPivot('grade_id');
+    }
+
+    public function grades()
+    {
+        return $this->belongsToMany(Grade::class)
+            ->withPivot('teacher_id');
+    }
+
+    public function lessons()
+    {
+        return $this->belongsToMany(Lesson::class)
+            ->withPivot(['teacher_id', 'grade_id']);
+    }
 }

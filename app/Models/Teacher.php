@@ -18,9 +18,21 @@ class Teacher extends Model
     {
         return $this->morphOne(Userable::class, 'userable');
     }
-
     public function subjects()
     {
-        return $this->belongsToMany(Subject::class, 'teacher_subjects');
+        return $this->belongsToMany(Subject::class)
+            ->withPivot('grade_id');
+    }
+
+    public function grades()
+    {
+        return $this->belongsToMany(Grade::class)
+            ->withPivot('subject_id');
+    }
+
+    public function lessons()
+    {
+        return $this->belongsToMany(Lesson::class)
+            ->withPivot(['subject_id', 'grade_id']);
     }
 }

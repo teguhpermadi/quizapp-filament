@@ -18,4 +18,22 @@ class Grade extends Model
     {
         return $this->belongsToMany(Student::class, 'student_grades');
     }
+
+    public function teachers()
+    {
+        return $this->belongsToMany(Teacher::class)
+            ->withPivot('subject_id');
+    }
+
+    public function subjects()
+    {
+        return $this->belongsToMany(Subject::class)
+            ->withPivot('teacher_id');
+    }
+
+    public function lessons()
+    {
+        return $this->belongsToMany(Lesson::class)
+            ->withPivot(['subject_id', 'teacher_id']);
+    }
 }
