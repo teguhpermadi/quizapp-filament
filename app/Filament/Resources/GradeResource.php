@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\GradeResource\Pages;
 use App\Filament\Resources\GradeResource\RelationManagers;
 use App\Filament\Resources\GradeResource\RelationManagers\StudentsRelationManager;
+use App\Filament\Resources\GradeResource\RelationManagers\SubjectsRelationManager;
 use App\Models\Grade;
 use App\Models\Student;
 use Filament\Forms;
@@ -42,15 +43,33 @@ class GradeResource extends Resource
                     ->label('Name')
                     ->searchable()
                     ->sortable(),
+                // count relation
+                TextColumn::make('students_count')
+                    ->label('Students Count')
+                    ->sortable()
+                    ->counts('students'),
+                // count relation
+                TextColumn::make('teachers_count')
+                    ->label('Teachers Count')
+                    ->sortable()
+                    ->counts('teachers'),
+                // count relation
+                TextColumn::make('subjects_count')
+                    ->label('Subjects Count')
+                    ->sortable()
+                    ->counts('subjects'),
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
-                RelationManagerAction::make('lesson-relation-manager')
-                    ->label('View Students')
+                RelationManagerAction::make('student-relation-manager')
+                    ->label('Students')
                     ->relationManager(StudentsRelationManager::make()),
+                RelationManagerAction::make('subject-relation-manager')
+                    ->label('Subjects')
+                    ->relationManager(SubjectsRelationManager::make()),
+                Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -60,7 +79,7 @@ class GradeResource extends Resource
             ->modifyQueryUsing(function (Builder $query) {
                 $teacherRole = auth()->user()->hasRole('teacher');
 
-                if($teacherRole) {
+                if ($teacherRole) {
                     $query->whereHas('teachers', function ($query) {
                         $query->where('teacher_id', auth()->user()->userable->userable_id);
                     });
@@ -72,6 +91,7 @@ class GradeResource extends Resource
     {
         return [
             StudentsRelationManager::class,
+            SubjectsRelationManager::class,
         ];
     }
 

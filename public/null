@@ -4,3 +4,35 @@ User::get()
   
 
 
+use App\Models\SubjectTeacherGrade;
+
+
+  
+
+
+
+Grade::find('01jmpr2h2a911ba979kc0zrth9')
+use App\Models\SubjectTeacherGrade;
+
+
+  
+
+
+
+Grade::find('01jmpr2h2a911ba979kc0zrth9')->with('students')
+use App\Models\SubjectTeacherGrade;
+
+
+  
+
+
+
+Grade::with('students')->find('01jmpr2h2a911ba979kc0zrth9')
+use App\Models\SubjectTeacherGrade;
+
+
+  
+
+
+
+Grade::with('students', 'subjects')->find('01jmpr2h2a911ba979kc0zrth9')
