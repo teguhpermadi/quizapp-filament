@@ -55,9 +55,7 @@ class LessonResource extends Resource
                 $teacherRole = auth()->user()->hasRole('teacher');
 
                 if($teacherRole) {
-                    $query->whereHas('teachers', function($query) {
-                        $query->where('teacher_id', auth()->user()->userable->userable_id);
-                    });
+                    $query->myLesson();
                 }
             });
     }
