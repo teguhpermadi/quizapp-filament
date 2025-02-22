@@ -4,7 +4,9 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\GradeResource\Pages;
 use App\Filament\Resources\GradeResource\RelationManagers;
+use App\Filament\Resources\GradeResource\RelationManagers\StudentsRelationManager;
 use App\Models\Grade;
+use App\Models\Student;
 use Filament\Forms;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -12,6 +14,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Guava\FilamentModalRelationManagers\Actions\Table\RelationManagerAction;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
@@ -45,6 +48,9 @@ class GradeResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                RelationManagerAction::make('lesson-relation-manager')
+                    ->label('View Students')
+                    ->relationManager(StudentsRelationManager::make()),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -65,7 +71,7 @@ class GradeResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            StudentsRelationManager::class,
         ];
     }
 
