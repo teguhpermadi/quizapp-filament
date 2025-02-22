@@ -1,22 +1,6 @@
-Teacher::with('user')->get()
-Teacher::get()
-Teacher::with('subjects')->get()
-Teacher::with('subjects.lesson')->get()
-Teacher::with('subjects')->get()
-Teacher::with('subjects.lessons')->get()
-Teacher::with('subjects.lessons')->get()
-Teacher::with('subjects.lessons')->get()
-Teacher::with('subjects.lessons')->get()
-Teacher::with('subjects.lessons')->get()
-Teacher::with('subjects.lessons')->get()
-Teacher::with('subjects.lessons')->get()
-Teacher::with('subjects')->get()
-Teacher::with('subjects')->get()
-Teacher::with('subjects')->get()
-Teacher::with('subjects.lessons')->get()
-Teacher::with('subjects.lessons')->get()
-Teacher::with('subjects.lessons')->get()
-Subject::with('teacher')->get()
-Subject::with('teachers')->get()
-Subject::with('grades')->get()
-Subject::with('grades', 'teachers')->get()
+use App\Models\SubjectTeacherGrade;
+
+User::get()
+  
+
+

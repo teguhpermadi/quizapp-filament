@@ -16,10 +16,10 @@ class TeacherSubjectGradeLessonSeeder extends Seeder
      */
     public function run(): void
     {
-        $teachers = Teacher::factory()->count(10)->create();
-        $grades = Grade::factory()->count(10)->create();
-        $subjects = Subject::factory()->count(10)->create();
-        $lessons = Lesson::factory()->count(10)->create();
+        $teachers = Teacher::get();
+        $grades = Grade::get();
+        $subjects = Subject::get();
+        $lessons = Lesson::get();
 
         // Assign teachers to subjects and grades
         $teachers->each(function ($teacher) use ($subjects, $grades) {

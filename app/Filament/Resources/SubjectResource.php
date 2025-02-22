@@ -2,11 +2,10 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\GradeResource\Pages;
-use App\Filament\Resources\GradeResource\RelationManagers;
-use App\Models\Grade;
+use App\Filament\Resources\SubjectResource\Pages;
+use App\Filament\Resources\SubjectResource\RelationManagers;
+use App\Models\Subject;
 use Filament\Forms;
-use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -15,9 +14,9 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class GradeResource extends Resource
+class SubjectResource extends Resource
 {
-    protected static ?string $model = Grade::class;
+    protected static ?string $model = Subject::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -25,9 +24,7 @@ class GradeResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name')
-                    ->label('Name')
-                    ->required(),
+                //
             ]);
     }
 
@@ -51,7 +48,7 @@ class GradeResource extends Resource
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ])
-            ->modifyQueryUsing(function (Builder $query) {
+            ->modifyQueryUsing(function(Builder $query) {
                 $teacherRole = auth()->user()->hasRole('teacher');
 
                 if($teacherRole) {
@@ -72,9 +69,9 @@ class GradeResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListGrades::route('/'),
-            'create' => Pages\CreateGrade::route('/create'),
-            'edit' => Pages\EditGrade::route('/{record}/edit'),
+            'index' => Pages\ListSubjects::route('/'),
+            'create' => Pages\CreateSubject::route('/create'),
+            'edit' => Pages\EditSubject::route('/{record}/edit'),
         ];
     }
 }

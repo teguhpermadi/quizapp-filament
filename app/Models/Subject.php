@@ -31,4 +31,17 @@ class Subject extends Model
         return $this->belongsToMany(Lesson::class, 'lesson_subject_teacher_grade')
             ->withPivot(['teacher_id', 'grade_id']);
     }
+
+    public function scopeMySubjects(Builder $builder): void
+    {
+        $teacher_id = auth()->user()?->userable->userable_id;
+
+        if(!$teacher_id) {
+            abort('403', 'unautorized');
+        }
+
+        $builder->whereHas('teachers', function ($query) use ($teacher_id) {
+            $query->where('teacher_id', $teacher_id);
+        });
+    }   
 }

@@ -36,6 +36,7 @@ class LessonResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('title')
+                    ->label('Title')
                     ->searchable()
                     ->sortable(),
             ])
@@ -49,7 +50,16 @@ class LessonResource extends Resource
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
-            ]);
+            ])
+            ->modifyQueryUsing(function(Builder $query) {
+                $teacherRole = auth()->user()->hasRole('teacher');
+
+                if($teacherRole) {
+                    $query->whereHas('teachers', function($query) {
+                        $query->where('teacher_id', auth()->user()->userable->userable_id);
+                    });
+                }
+            });
     }
 
     public static function getRelations(): array
