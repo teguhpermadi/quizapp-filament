@@ -45,4 +45,9 @@ class Lesson extends Model
             $query->where('teacher_id', $teacher_id);
         });
     }
+
+    public function exercises()
+    {
+        return $this->hasMany(Exercise::class);
+    }
 }
