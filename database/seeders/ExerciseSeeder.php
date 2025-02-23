@@ -13,6 +13,6 @@ class ExerciseSeeder extends Seeder
      */
     public function run(): void
     {
-        Exercise::factory()->count(10)->create();
+        Exercise::factory()->count(50)->create();
     }
 }
