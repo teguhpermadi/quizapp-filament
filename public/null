@@ -6,3 +6,13 @@ use App\Models\Paragraph::with('question')->get()
 App\Models\Paragraph::with('question')->get()
 Question::get()
 Question::with('answer')->get()
+App\Models\Exam::get()
+App\Models\Exam::with('question')->get()
+App\Models\Exam::with('question.answer')->get()
+App\Models\Exam::with('question.answer')->get()
+
+Question::get()->random(3);
+
+Question::get()->random(3)->pluck('id');
+App\Models\Exam::with('question.answer')->get()
+

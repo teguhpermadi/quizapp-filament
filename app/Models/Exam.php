@@ -21,8 +21,8 @@ class Exam extends Model
         return $this->belongsTo(User::class, 'teacher_id');
     }
 
-    // public function question()
-    // {
-    //     return $this->belongsToMany(Question::class, 'question_bank_question');
-    // }
+    public function question()
+    {
+        return $this->belongsToMany(Question::class, 'exam_question');
+    }
 }
