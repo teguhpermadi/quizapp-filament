@@ -16,3 +16,9 @@ Question::get()->random(3);
 Question::get()->random(3)->pluck('id');
 App\Models\Exam::with('question.answer')->get()
 
+App\Models\Exam::with('question.answer', 'count_question')->get()
+
+App\Models\Exam::with('question.answer', 'question_count')->get()
+
+App\Models\Exam::with('question.answer')->withCount('question')->get()
+
