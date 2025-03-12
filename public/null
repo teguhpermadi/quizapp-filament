@@ -1,2 +1,6 @@
 User::get()
 Question::get()
+Question::with('paragraph')->get()
+Paragraph::with('question')->get()
+use App\Models\Paragraph::with('question')->get()
+App\Models\Paragraph::with('question')->get()

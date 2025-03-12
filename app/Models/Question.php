@@ -15,4 +15,14 @@ class Question extends Model
     use SoftDeletes;
 
     protected $guarded = [];
+
+    public function teacher()
+    {
+        return $this->belongsTo(Teacher::class);
+    }
+
+    public function paragraph()
+    {
+        return $this->belongsToMany(Paragraph::class, 'paragraph_question');
+    }
 }

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Paragraph;
+use App\Models\Question;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -13,6 +14,10 @@ class ParagraphSeeder extends Seeder
      */
     public function run(): void
     {
-        Paragraph::factory()->count(10)->create();
+        $paragraphs = Paragraph::factory(3)->create();
+        $paragraphs->each(function($paragraph){
+            $questions = Question::get()->random(rand(1, 5))->pluck('id')->toArray();
+            $paragraph->question()->attach($questions);
+        });
     }
 }

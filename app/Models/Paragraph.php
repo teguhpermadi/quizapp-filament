@@ -15,4 +15,9 @@ class Paragraph extends Model
     use SoftDeletes;
 
     protected $guarded = [];
+
+    public function question()
+    {
+        return $this->belongsToMany(Question::class, 'paragraph_question');
+    }
 }
