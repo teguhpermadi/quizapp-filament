@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
             // QuestionSeeder::class,
             AnswerSeeder::class,
             ParagraphSeeder::class,
+            ExamSeeder::class,
         ]);
     }
 }
