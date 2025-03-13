@@ -2,10 +2,18 @@
 
 namespace App\Filament\Resources;
 
+use App\Enums\QuestionTypeEnum;
 use App\Filament\Resources\ExamResource\Pages;
 use App\Filament\Resources\ExamResource\RelationManagers;
 use App\Models\Exam;
 use Filament\Forms;
+use Filament\Forms\Components\Fieldset;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TagsInput;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -25,7 +33,20 @@ class ExamResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Fieldset::make('Setting')
+                    ->schema([
+                        TextInput::make('title')
+                            ->label('Title')
+                            ->required(),
+                        TextArea::make('description')
+                            ->label('Description'),
+                        TagsInput::make('tags')
+                            ->label('Tag')
+                            ->separator(','),
+                        FileUpload::make('image')
+                            ->label('Image')
+                            ->image(),
+                    ]),
             ]);
     }
 
@@ -43,7 +64,7 @@ class ExamResource extends Resource
                 TextColumn::make('question_count')
                     ->counts('question')
                     ->label('Questions'),
-                TextColumn::make('tag')
+                TextColumn::make('tags')
                     ->badge()
                     ->separator(',')
                     ->searchable()
@@ -56,7 +77,7 @@ class ExamResource extends Resource
                 Tables\Actions\EditAction::make(),
                 Action::make('question')
                     ->label('Questions')
-                    ->url(fn (Exam $exam) => route('filament.admin.resources.exams.question', $exam)),
+                    ->url(fn(Exam $exam) => route('filament.admin.resources.exams.question', $exam)),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
