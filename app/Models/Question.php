@@ -16,6 +16,10 @@ class Question extends Model
 
     protected $guarded = [];
 
+    protected $casts = [
+        'tags' => 'array',
+    ];
+
     public function teacher()
     {
         return $this->belongsTo(Teacher::class);

@@ -27,7 +27,7 @@ class QuestionFactory extends Factory
             'image' => $faker->imageUrl(),
             'explanation' => fake()->realText(),
             'score' => fake()->numberBetween(1, 10),
-            'tag' => fake()->word(),
+            'tags' => fake()->word(),
             'timer' => fake()->numberBetween(1000, 3000),
             'level' => fake()->randomElement(['easy', 'medium', 'hard']),
             'teacher_id' => Teacher::get()->random()->id,

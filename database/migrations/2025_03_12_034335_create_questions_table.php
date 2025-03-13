@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->text('explanation')->nullable();
             $table->integer('score')->default(1);
-            $table->string('tag')->nullable();
+            $table->string('tags')->nullable();
             $table->time('timer')->default(0);
             $table->string('level')->nullable();
             $table->foreignUlid('teacher_id')->constrained()->cascadeOnDelete();
