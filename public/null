@@ -22,3 +22,6 @@ App\Models\Exam::with('question.answer', 'question_count')->get()
 
 App\Models\Exam::with('question.answer')->withCount('question')->get()
 
+App\Models\Exam::get()
+
+App\Models\Exam::get()
