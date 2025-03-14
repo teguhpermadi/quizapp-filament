@@ -5,8 +5,10 @@ namespace App\Filament\Resources;
 use App\Enums\QuestionTypeEnum;
 use App\Filament\Resources\ExamResource\Pages;
 use App\Filament\Resources\ExamResource\RelationManagers;
+use App\Filament\Resources\ExamResource\RelationManagers\QuestionRelationManager;
 use App\Models\Exam;
 use Filament\Forms;
+use Filament\Forms\Components\Builder as ComponentsBuilder;
 use Filament\Forms\Components\Fieldset;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
@@ -47,6 +49,32 @@ class ExamResource extends Resource
                             ->label('Image')
                             ->image(),
                     ]),
+                // ComponentsBuilder::make('questions')
+                //     ->blocks([
+                //         ComponentsBuilder\Block::make('Multiple Choice')
+                //             ->schema([
+                //                 TextInput::make('question_type')
+                //                     ->default(QuestionTypeEnum::MULTIPLE_CHOICE),
+                //                 Textarea::make('question')
+                //                     ->required(),
+                //                 FileUpload::make('image')
+                //                     ->columnSpan(1)
+                //                     ->image(),
+                //             ])
+                //             ->columns(2),
+                //         ComponentsBuilder\Block::make('Multiple Answer')
+                //             ->schema([
+                //                 TextInput::make('question_type')
+                //                     ->default(QuestionTypeEnum::MULTIPLE_ANSWER),
+                //                 Textarea::make('question')
+                //                     ->required(),
+                //                 FileUpload::make('image')
+                //                     ->columnSpan(1)
+                //                     ->image(),
+                //             ])
+                //             ->columns(2),
+                //     ])
+                //     ->columnSpanFull(),
             ]);
     }
 
@@ -89,7 +117,7 @@ class ExamResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            QuestionRelationManager::class,
         ];
     }
 
