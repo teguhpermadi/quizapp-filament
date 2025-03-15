@@ -16,6 +16,7 @@ class ExamQuestion extends Page implements HasForms
     use InteractsWithRecord;
 
     public ?array $data = []; 
+    public $questions;
 
     protected static string $resource = ExamResource::class;
 
@@ -28,6 +29,8 @@ class ExamQuestion extends Page implements HasForms
         $this->form->fill([
             'title' => $this->record->title,
         ]);
+
+        $this->questions = $this->record->question;
     }
  
     public function form(Form $form): Form
