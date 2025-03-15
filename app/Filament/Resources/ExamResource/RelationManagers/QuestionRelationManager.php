@@ -14,6 +14,9 @@ use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables;
+use Filament\Tables\Columns\Layout\Grid;
+use Filament\Tables\Columns\Layout\Split;
+use Filament\Tables\Columns\Layout\Stack;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -39,10 +42,32 @@ class QuestionRelationManager extends RelationManager
         return $table
             // ->recordTitleAttribute('id')
             ->columns([
-                TextColumn::make('question')
-                    ->wrap(),
-                TextColumn::make('question_type')
-                    ->badge(),
+                Grid::make([
+                    'lg' => 2,
+                ])
+                    ->schema([
+                        Stack::make([
+                            Split::make([
+                                TextColumn::make('question_type')
+                                    ->badge()
+                                    ->prefix('Question Type: '),
+                                TextColumn::make('timer')
+                                    ->badge()
+                                    ->prefix('Timer: ')
+                                    ->suffix(' seconds'),
+                                    TextColumn::make('score')
+                                    ->prefix('Score: ')
+                                    ->suffix(' points')
+                                    ->badge(),
+                            ]),
+                            TextColumn::make('question'),
+                        ])
+                        ->columnSpan([
+                            'lg' => 'full',
+                            '2xl' => 2,
+                        ]),
+                    ]),
+
             ])
             ->filters([
                 //
@@ -52,14 +77,14 @@ class QuestionRelationManager extends RelationManager
                     ->slideOver(),
             ])
             ->actions([
-                Tables\Actions\EditAction::make()
-                    ->slideOver(),
-                Tables\Actions\DeleteAction::make(),
+                // Tables\Actions\EditAction::make()
+                //     ->slideOver(),
+                // Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
+                // Tables\Actions\BulkActionGroup::make([
+                //     Tables\Actions\DeleteBulkAction::make(),
+                // ]),
             ]);
     }
 }
