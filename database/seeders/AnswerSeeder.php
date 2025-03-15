@@ -58,6 +58,9 @@ class AnswerSeeder extends Seeder
 
         // true false
         Question::factory()
+            ->state([
+                'question_type' => QuestionTypeEnum::TRUE_FALSE,
+            ])
             ->has(Answer::factory()
                 ->trueFalse()
                 ->state([
@@ -77,6 +80,9 @@ class AnswerSeeder extends Seeder
 
         // matching
         Question::factory()
+            ->state([
+                'question_type' => QuestionTypeEnum::MATCHING,
+            ])
             ->has(Answer::factory()
                 ->count(4))
             ->count(5)
@@ -84,6 +90,9 @@ class AnswerSeeder extends Seeder
 
         // ordering
         Question::factory()
+            ->state([
+                'question_type' => QuestionTypeEnum::ORDERING,
+            ])
             ->has(Answer::factory()
                 ->ordering()
                 ->count(4))

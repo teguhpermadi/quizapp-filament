@@ -14,9 +14,9 @@ class ExamSeeder extends Seeder
      */
     public function run(): void
     {
-        $exam = Exam::factory(3)->create();
+        $exam = Exam::factory(1)->create();
         $exam->each(function($exam){
-            $questions = Question::get()->random(5);
+            $questions = Question::get();
             $exam->question()->attach($questions->pluck('id'));
         });
     }
