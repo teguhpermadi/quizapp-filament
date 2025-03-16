@@ -14,7 +14,9 @@ class Paragraph extends Model
     use HasUlids;
     use SoftDeletes;
 
-    protected $guarded = [];
+    protected $fillable = [
+        'paragraph',
+    ];
 
     public function question()
     {

@@ -14,7 +14,13 @@ class Exam extends Model
     use HasUlids;
     use SoftDeletes;
 
-    protected $guarded = [];
+    protected $fillable = [
+        'teacher_id',
+        'title',
+        'image',
+        'description',
+        'tags',
+    ];
 
     protected $casts = [
         'tags' => 'array',

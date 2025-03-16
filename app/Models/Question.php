@@ -15,7 +15,17 @@ class Question extends Model
     use HasUlids;
     use SoftDeletes;
 
-    protected $guarded = [];
+    protected $fillable = [
+        'question',
+        'question_type',
+        'image',
+        'explanation',
+        'score',
+        'tags',
+        'timer',
+        'level',
+        'teacher_id',
+    ];
 
     protected $casts = [
         'tags' => 'array',

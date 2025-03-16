@@ -13,7 +13,9 @@ class Grade extends Model
     use HasFactory;
     use HasUlids;
 
-    protected $guarded = [];
+    protected $fillable = [
+        'name',
+    ];
 
     public function students()
     {

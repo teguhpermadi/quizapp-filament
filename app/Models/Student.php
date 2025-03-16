@@ -12,7 +12,9 @@ class Student extends Model
     use HasFactory;
     use HasUlids;
 
-    protected $guarded = [];
+    protected $fillable = [
+        'name'
+    ];
 
     public function userable()
     {

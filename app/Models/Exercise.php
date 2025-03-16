@@ -12,7 +12,12 @@ class Exercise extends Model
     use HasFactory;
     use HasUlids;
 
-    protected $guarded = [];
+    protected $fillable = [
+        'name',
+        'description',
+        'lesson_id',
+        'teacher_id',
+    ];
 
     public function lesson()
     {

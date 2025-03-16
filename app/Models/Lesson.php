@@ -13,7 +13,9 @@ class Lesson extends Model
     use HasFactory;
     use HasUlids;
 
-    protected $guarded = [];
+    protected $fillable = [
+        'title',
+    ];
 
     public function teachers()
     {
