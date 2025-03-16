@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -19,6 +20,11 @@ class Question extends Model
     protected $casts = [
         'tags' => 'array',
     ];
+
+    public function getTimerAttribute()
+    {
+        return Carbon::createFromTimestampMs($this->attributes['timer'])->timestamp;
+    }
 
     public function teacher()
     {
