@@ -1,3 +1,4 @@
+@vite('resources/css/app.css')
 <x-filament-panels::page>
     <x-filament-panels::form>
         {{ $this->form }}

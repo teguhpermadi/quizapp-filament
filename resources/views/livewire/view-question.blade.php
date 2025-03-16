@@ -3,26 +3,28 @@
         <div class="flex justify-between items-center">
             <div class="flex items-center space-x-2 gap-2">
                 <!-- tampilkan tipe soal -->
-                <span class="text-sm font-light text-gray-600">Type: {{$question->question_type}}</span>
+                <span class="border rounded-md px-2 py-1 text-sm text-gray-600">Type: {{Str::ucwords($question->question_type)}}</span>
                 <!-- tampilkan score -->
-                <span class="text-sm font-light text-gray-600">Score: {{$question->score}}</span>
+                <span class="border rounded-md px-2 py-1 text-sm text-gray-600">Score: {{$question->score}}</span>
                 <!-- tampilkan waktu -->
-                <span class="text-sm font-light text-gray-600">Time: {{$question->timer}} seconds</span>
+                <span class="border rounded-md px-2 py-1 text-sm text-gray-600">Time: {{$question->timer}} seconds</span>
             </div>
             <div class="flex items-center space-x-2">
                 <!-- tampilkan tombol edit -->
                 <div class="flex items-center space-x-2">
-                    <button wire:click="editQuestion({{$question->id}})" class="text-sm font-light text-gray-600 hover:text-gray-500">Edit</button>
+                    <button wire:click="editQuestion({{$question->id}})" 
+                        class="border rounded-md px-2 py-1 text-sm">Edit</button>
                 </div>
                 <!-- tampilkan tombol hapus -->
                 <div class="flex items-center space-x-2">
-                    <button wire:click="deleteQuestion({{$question->id}})" class="text-sm font-light text-gray-600 hover:text-gray-500">Delete</button>
+                    <button wire:click="deleteQuestion({{$question->id}})" 
+                        class="border rounded-md px-2 py-1 text-sm">Delete</button>
                 </div>
             </div>
         </div>
 
         <div class="mt-6">
-            <p class="font-normal text-md text-blue-500">{{$question->question}}</p>
+            <p class="text-md">{{$question->question}}</p>
         </div>
         <div class="mt-6">
             @switch($question->question_type)
