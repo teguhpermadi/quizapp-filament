@@ -41,5 +41,11 @@
             <p>Bukan soal multiple choice</p>
             @endswitch
         </div>
+        <!-- buatkan garis pembatas -->
+        <div class="border-t mt-6"></div>
+        <div class="mt-2">
+            <p class="text-sm text-gray-600">Explanation</p>
+            <p class="text-md">{{$question->explanation}}</p>
+        </div>
     </div>
 </div>
