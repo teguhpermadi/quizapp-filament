@@ -84,8 +84,9 @@ class AnswerSeeder extends Seeder
                 'question_type' => QuestionTypeEnum::MATCHING,
             ])
             ->has(Answer::factory()
-                ->count(4))
-            ->count(5)
+                ->matching()
+                ->count(2))
+            ->count(1)
             ->create();
 
         // ordering

@@ -65,24 +65,20 @@ class AnswerFactory extends Factory
      */
     public function matching()
     {
-        return $this->afterCreating(function (Answer $answer) {
-            // Periksa apakah pasangan sudah ada dan tipe metadata cocok
-            if (is_null($answer->matching_pair)) {
-                $expectedType = $answer->metadata['type'] === 'domain' ? 'kodomain' : 'domain';
-
-                // Cari jawaban yang belum memiliki pasangan dan memiliki tipe metadata yang sesuai
-                $unmatchedAnswer = Answer::where('question_id', $answer->question_id)
-                    ->whereNull('matching_pair')
-                    ->where('id', '!=', $answer->id)
-                    ->where('metadata->type', $expectedType)
-                    ->first();
-
-                if ($unmatchedAnswer) {
-                    // Pasangkan jawaban dengan pasangan yang ditemukan
-                    $unmatchedAnswer->update(['matching_pair' => $answer->id]);
-                    $answer->update(['matching_pair' => $unmatchedAnswer->id]);
-                }
-            }
+        return $this->state(function(){
+            return [
+                'metadata' => 'type=domain'
+            ];
+        })->afterCreating(function (Answer $answer) {
+            $answer->update([
+                'matching_pair' => Answer::factory()
+                                        ->state([
+                                            'question_id' => $answer->question_id,
+                                            'matching_pair' => $answer->id,
+                                            'metadata' => 'type=>kodomain'
+                                            ])
+                                        ->create()->id,
+            ]);
         });
     }
 
