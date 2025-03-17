@@ -86,7 +86,7 @@ class AnswerSeeder extends Seeder
             ->has(Answer::factory()
                 ->matching()
                 ->count(2))
-            ->count(1)
+            ->count(5)
             ->create();
 
         // ordering

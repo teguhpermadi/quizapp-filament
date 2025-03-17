@@ -67,7 +67,7 @@ class AnswerFactory extends Factory
     {
         return $this->state(function(){
             return [
-                'metadata' => 'type=domain'
+                'metadata' => ['type' => 'domain'],
             ];
         })->afterCreating(function (Answer $answer) {
             $answer->update([
@@ -75,7 +75,7 @@ class AnswerFactory extends Factory
                                         ->state([
                                             'question_id' => $answer->question_id,
                                             'matching_pair' => $answer->id,
-                                            'metadata' => 'type=>kodomain'
+                                            'metadata' => ['type' => 'kodomain'],
                                             ])
                                         ->create()->id,
             ]);
