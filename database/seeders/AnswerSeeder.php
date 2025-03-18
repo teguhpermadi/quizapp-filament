@@ -110,5 +110,16 @@ class AnswerSeeder extends Seeder
                 ->count(1))
             ->count(5)
             ->create();
+
+        // essay
+        Question::factory()
+            ->state([
+                'question_type' => QuestionTypeEnum::ESSAY,
+            ])
+            ->has(Answer::factory()
+                ->essay()
+                ->count(1))
+            ->count(5)
+            ->create();
     }
 }

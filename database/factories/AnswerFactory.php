@@ -107,4 +107,12 @@ class AnswerFactory extends Factory
             'is_correct' => true,
         ]);
     }
+
+    public function essay()
+    {
+        return $this->state(fn() => [
+            'answer_text' => fake()->paragraph(),
+            'is_correct' => true,
+        ]);
+    }
 }

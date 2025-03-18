@@ -46,6 +46,9 @@
                 @case('short answer')
                     @livewire('short-answer', ['question' => $question])
                 @break
+                @case('essay')
+                    @livewire('short-answer', ['question' => $question])
+                @break
             @default
             <p>Bukan soal multiple choice</p>
             @endswitch
