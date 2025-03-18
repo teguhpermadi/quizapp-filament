@@ -28,15 +28,18 @@
         </div>
         <div class="mt-6">
             @switch($question->question_type)
-            @case('multiple choice')
-            @livewire('multiple-choice-answer', ['question' => $question])
-            @break
-            @case('multiple answer')
-            @livewire('multiple-choice-answer', ['question' => $question])
-            @break
-            @case('true false')
-            @livewire('multiple-choice-answer', ['question' => $question])
-            @break
+                @case('multiple choice')
+                    @livewire('multiple-choice-answer', ['question' => $question])
+                @break
+                @case('multiple answer')
+                    @livewire('multiple-choice-answer', ['question' => $question])
+                @break
+                @case('true false')
+                    @livewire('multiple-choice-answer', ['question' => $question])
+                @break
+                @case('matching')
+                    @livewire('matching-answer', ['question' => $question])
+                @break
             @default
             <p>Bukan soal multiple choice</p>
             @endswitch
@@ -45,7 +48,7 @@
         <div class="border-t mt-6"></div>
         <div class="mt-2">
             <p class="text-sm text-gray-600">Explanation</p>
-            <p class="text-md">{{$question->explanation}}</p>
+            <p class="text-sm">{{$question->explanation}}</p>
         </div>
     </div>
 </div>

@@ -1,27 +1,31 @@
-User::get()
-Question::get()
-Question::with('paragraph')->get()
-Paragraph::with('question')->get()
-use App\Models\Paragraph::with('question')->get()
-App\Models\Paragraph::with('question')->get()
-Question::get()
-Question::with('answer')->get()
-App\Models\Exam::get()
-App\Models\Exam::with('question')->get()
-App\Models\Exam::with('question.answer')->get()
-App\Models\Exam::with('question.answer')->get()
+Question::where('type', 'matching')->get()
+Question::where('question_type', 'matching')->get()
+Question::where('question_type', 'matching')->with('answer')->get()
+Question::where('question_type', 'matching')->with('answer')->get()
 
-Question::get()->random(3);
+Answer::find('01jpgt11bphse3j4rhyrnrekp0')
 
-Question::get()->random(3)->pluck('id');
-App\Models\Exam::with('question.answer')->get()
+Answer::find('01jpgt11bphse3j4rhyrnrekp0')->question
 
-App\Models\Exam::with('question.answer', 'count_question')->get()
+$question = Answer::find('01jpgt11bphse3j4rhyrnrekp0')->question;
 
-App\Models\Exam::with('question.answer', 'question_count')->get()
+$question = Answer::find('01jpgt11bphse3j4rhyrnrekp0')->question;
+$answers = $question->answer;
+Question::where('question_type', 'matching')->with('answer')->get()
 
-App\Models\Exam::with('question.answer')->withCount('question')->get()
 
-App\Models\Exam::get()
+Question::where('question_type', 'matching')->with('answer')->get()
 
-App\Models\Exam::get()
+
+Question::where('question_type', 'matching')->with('answer')->get()
+
+
+Question::where('question_type', 'matching')->with('answer')->get()
+
+
+Question::where('question_type', 'matching')->with('answer')->get()
+
+
+Question::where('question_type', 'matching')->with('answer')->get()
+
+
