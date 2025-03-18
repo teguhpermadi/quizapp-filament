@@ -35,7 +35,7 @@ class Lesson extends Model
             ->withPivot(['subject_id', 'teacher_id']);
     }
 
-    public function scopeMyLesson(Builder $builder): void
+    public function scopeMyLessons(Builder $builder): void
     {
         $teacher_id = auth()->user()?->userable->userable_id;
 

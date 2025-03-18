@@ -17,7 +17,7 @@ class ExamSeeder extends Seeder
         $exam = Exam::factory(1)->create();
         $exam->each(function($exam){
             $questions = Question::get();
-            $exam->question()->attach($questions->pluck('id'));
+            $exam->questions()->attach($questions->pluck('id'));
         });
     }
 }

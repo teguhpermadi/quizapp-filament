@@ -17,7 +17,7 @@ class ParagraphSeeder extends Seeder
         $paragraphs = Paragraph::factory(3)->create();
         $paragraphs->each(function($paragraph){
             $questions = Question::get()->random(rand(1, 5))->pluck('id')->toArray();
-            $paragraph->question()->attach($questions);
+            $paragraph->questions()->attach($questions);
         });
     }
 }

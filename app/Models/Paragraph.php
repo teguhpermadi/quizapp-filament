@@ -18,7 +18,7 @@ class Paragraph extends Model
         'paragraph',
     ];
 
-    public function question()
+    public function questions()
     {
         return $this->belongsToMany(Question::class, 'paragraph_question');
     }
