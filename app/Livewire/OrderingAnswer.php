@@ -10,7 +10,7 @@ class OrderingAnswer extends Component
 
     public function mount($question)
     {
-        $this->answers = $question->answer()->orderBy('order_position')->get();
+        $this->answers = $question->answers()->orderBy('order_position')->get();
     }
 
     public function render()

@@ -30,7 +30,7 @@ class ExamQuestion extends Page implements HasForms
             'title' => $this->record->title,
         ]);
 
-        $this->questions = $this->record->question;
+        $this->questions = $this->record->questions;
     }
  
     public function form(Form $form): Form

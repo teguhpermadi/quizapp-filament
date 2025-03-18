@@ -10,7 +10,7 @@ class MatchingAnswer extends Component
 
     public function mount($question)
     {
-        $this->answers = $question->answer()->where('metadata->type', 'domain')->get();
+        $this->answers = $question->answers()->where('metadata->type', 'domain')->get();
         // dd($this->answers);
     }
 

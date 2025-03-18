@@ -89,8 +89,8 @@ class ExamResource extends Resource
                     ->label('Author')
                     ->searchable()
                     ->sortable(),
-                TextColumn::make('question_count')
-                    ->counts('question')
+                TextColumn::make('questions_count')
+                    ->counts('questions')
                     ->label('Questions'),
                 TextColumn::make('tags')
                     ->badge()
@@ -103,7 +103,7 @@ class ExamResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Action::make('question')
+                Action::make('questions')
                     ->label('Questions')
                     ->url(fn(Exam $exam) => route('filament.admin.resources.exams.question', $exam)),
             ])

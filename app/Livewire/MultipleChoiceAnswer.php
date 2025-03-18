@@ -10,7 +10,7 @@ class MultipleChoiceAnswer extends Component
 
     public function mount($question)
     {
-        $this->answers = $question->answer;
+        $this->answers = $question->answers;
     }
     public function render()
     {
