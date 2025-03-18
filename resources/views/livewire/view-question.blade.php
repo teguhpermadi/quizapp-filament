@@ -40,6 +40,9 @@
                 @case('matching')
                     @livewire('matching-answer', ['question' => $question])
                 @break
+                @case('ordering')
+                    @livewire('ordering-answer', ['question' => $question])
+                @break
             @default
             <p>Bukan soal multiple choice</p>
             @endswitch
