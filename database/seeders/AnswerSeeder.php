@@ -99,5 +99,16 @@ class AnswerSeeder extends Seeder
                 ->count(4))
             ->count(5)
             ->create();
+
+        // short answer
+        Question::factory()
+            ->state([
+                'question_type' => QuestionTypeEnum::SHORT_ANSWER,
+            ])
+            ->has(Answer::factory()
+                ->shortAnswer()
+                ->count(1))
+            ->count(5)
+            ->create();
     }
 }

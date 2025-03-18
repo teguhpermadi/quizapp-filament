@@ -6,11 +6,11 @@ use Livewire\Component;
 
 class ShortAnswer extends Component
 {
-    public $answer;
+    public $answers;
 
     public function mount($question)
     {
-        $this->answer = $question->answer;
+        $this->answers = $question->answers;
     }
     
     public function render()

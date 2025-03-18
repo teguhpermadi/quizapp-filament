@@ -104,6 +104,7 @@ class AnswerFactory extends Factory
     {
         return $this->state(fn() => [
             'answer_text' => fake()->word(),
+            'is_correct' => true,
         ]);
     }
 }

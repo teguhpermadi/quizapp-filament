@@ -1,31 +1,6 @@
-Question::where('type', 'matching')->get()
-Question::where('question_type', 'matching')->get()
-Question::where('question_type', 'matching')->with('answer')->get()
-Question::where('question_type', 'matching')->with('answer')->get()
-
-Answer::find('01jpgt11bphse3j4rhyrnrekp0')
-
-Answer::find('01jpgt11bphse3j4rhyrnrekp0')->question
-
-$question = Answer::find('01jpgt11bphse3j4rhyrnrekp0')->question;
-
-$question = Answer::find('01jpgt11bphse3j4rhyrnrekp0')->question;
-$answers = $question->answer;
-Question::where('question_type', 'matching')->with('answer')->get()
+Question::where('question_type', 'short answer')->with('answer')->get()
 
 
-Question::where('question_type', 'matching')->with('answer')->get()
-
-
-Question::where('question_type', 'matching')->with('answer')->get()
-
-
-Question::where('question_type', 'matching')->with('answer')->get()
-
-
-Question::where('question_type', 'matching')->with('answer')->get()
-
-
-Question::where('question_type', 'matching')->with('answer')->get()
+Question::where('question_type', 'short answer')->with('answers')->get()
 
 
