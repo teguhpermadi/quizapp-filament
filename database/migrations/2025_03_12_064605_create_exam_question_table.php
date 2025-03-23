@@ -12,8 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('exam_question', function (Blueprint $table) {
-            $table->foreignUlid('exam_id')->constrained('exams')->cascadeOnDelete();
-            $table->foreignUlid('question_id')->constrained('questions')->cascadeOnDelete();
+            $table->foreignUlid('exam_id')->constrained()->cascadeOnDelete();
+            $table->foreignUlid('question_id')->constrained()->cascadeOnDelete();
+            // $table->foreignUlid('paragraph_id')->nullable()->constrained()->cascadeOnDelete();
             $table->unique(['exam_id', 'question_id'], 'exam_question_unique');
         });
     }

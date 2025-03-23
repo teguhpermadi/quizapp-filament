@@ -28,7 +28,7 @@ class QuestionFactory extends Factory
             'explanation' => fake()->realText(),
             'score' => fake()->numberBetween(1, 10),
             'tags' => fake()->word(),
-            'timer' => fake()->numberBetween(1000, 3000),
+            'timer' => fake()->time(),
             'level' => fake()->randomElement(['easy', 'medium', 'hard']),
             'teacher_id' => Teacher::get()->random()->id,
         ];
