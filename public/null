@@ -1,6 +1,43 @@
-Question::where('question_type', 'short answer')->with('answer')->get()
+Exam::join('questions')->get()
+Exam::with('questions')->first()
+Exam::with('questions.paragraph')->first()
+use Illuminate\Support\Facades\DB;
 
+DB::table('exam_question')->join('paragraph_question', 'exam_question.question_id', '=', 'paragraph_question.question_id')->get()
+use Illuminate\Support\Facades\DB;
 
-Question::where('question_type', 'short answer')->with('answers')->get()
+DB::table('exam_question')->leftJoin('paragraph_question', 'exam_question.question_id', '=', 'paragraph_question.question_id')->get()
+use Illuminate\Support\Facades\DB;
 
+DB::table('exam_question')
+  ->leftJoin('paragraph_question', 'exam_question.question_id', '=', 'paragraph_question.question_id')
+  ->get()
+use Illuminate\Support\Facades\DB;
 
+DB::table('exam_question')
+  ->leftJoin('paragraph_question', 'exam_question.question_id', '=', 'paragraph_question.question_id')
+  ->groupBy('paragraph_id')
+  ->get()
+use Illuminate\Support\Facades\DB;
+
+DB::table('exam_question')
+  ->leftJoin('paragraph_question', 'exam_question.question_id', '=', 'paragraph_question.question_id')
+  ->groupBy('paragraph_question.paragraph_id')
+  ->get()
+use Illuminate\Support\Facades\DB;
+
+DB::table('exam_question')
+  ->leftJoin('paragraph_question', 'exam_question.question_id', '=', 'paragraph_question.question_id')
+  ->get()
+use Illuminate\Support\Facades\DB;
+
+DB::table('exam_question')
+  ->leftJoin('paragraph_question', 'exam_question.question_id', '=', 'paragraph_question.question_id')
+  ->groupBy('paragraph_question.paragraph_id')
+  ->get()
+use Illuminate\Support\Facades\DB;
+
+DB::table('exam_question')
+  ->leftJoin('paragraph_question', 'exam_question.question_id', '=', 'paragraph_question.question_id')
+  ->get()
+Exam::query()->with('questions')->get()
