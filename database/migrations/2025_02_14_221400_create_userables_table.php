@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('userables', function (Blueprint $table) {
             $table->foreignUlid('user_id')->constrained()->cascadeOnDelete();
-            $table->morphs('userable');
+            $table->string('userable_id');
+            $table->string('userable_type');
             $table->unique(['user_id', 'userable_id']);
         });
     }
