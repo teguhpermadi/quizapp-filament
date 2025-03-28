@@ -41,13 +41,25 @@ class Question extends Model
         return $this->belongsTo(Teacher::class);
     }
 
+    public function exams()
+    {
+        return $this->belongsToMany(Exam::class, 'exam_question_paragraph')
+            ->withPivot('paragraph_id');
+    }
+
     public function paragraph()
     {
-        return $this->belongsToMany(Paragraph::class, 'paragraph_question');
+        return $this->belongsToMany(Paragraph::class, 'exam_question_paragraph')
+            ->withPivot('exam_id');
     }
 
     public function answers()
     {
         return $this->hasMany(Answer::class);
+    }
+
+    public function examquestionparagraphs()
+    {
+        return $this->hasMany(ExamQuestionParagraph::class);
     }
 }

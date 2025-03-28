@@ -26,9 +26,10 @@ class DatabaseSeeder extends Seeder
             TeacherSubjectGradeLessonSeeder::class,
             ExerciseSeeder::class,
             // QuestionSeeder::class,
-            AnswerSeeder::class,
-            ParagraphSeeder::class,
-            ExamSeeder::class,
+            // AnswerSeeder::class,
+            // ParagraphSeeder::class,
+            // ExamSeeder::class,
+            ExamQuestionParagraphSeeder::class,
         ]);
     }
 }

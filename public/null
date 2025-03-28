@@ -1,43 +1,104 @@
-Exam::join('questions')->get()
-Exam::with('questions')->first()
-Exam::with('questions.paragraph')->first()
-use Illuminate\Support\Facades\DB;
+$examId = '01jq5efxc7179v5exrtbac9qza';
+ExamQuestionParagraph::where('exam_id', $examId)->get();
+$examId = '01jq5efxc7179v5exrtbac9qza';
+ExamQuestionParagraph::where('exam_id', $examId)->groupBy('paragraph_id')->get();
+$examId = '01jq5efxc7179v5exrtbac9qza';
+ExamQuestionParagraph::query()->select('*')->groupBy('paragraph_id')->where('exam_id', $examId)->get();
+$examId = '01jq5efxc7179v5exrtbac9qza';
+ExamQuestionParagraph::query()->select('*')->groupBy('paragraph_id')->where('exam_id', $examId)->get();
+$examId = '01jq5efxc7179v5exrtbac9qza';
+ExamQuestionParagraph::query()->select('*')->groupBy('paragraph_id')->where('exam_id', $examId)->get();
+$examId = '01jq5efxc7179v5exrtbac9qza';
+ExamQuestionParagraph::query()->select('*')->groupBy('paragraph_id')->where('exam_id', $examId)->get();
+$examId = '01jq5efxc7179v5exrtbac9qza';
+ExamQuestionParagraph::query()->select('*')->groupBy('paragraph_id')->where('exam_id', $examId)->get();
+$examId = '01jq5efxc7179v5exrtbac9qza';
+ExamQuestionParagraph::query()->select('*')->groupBy('paragraph_id')->where('exam_id', $examId)->get();
+$examId = '01jq5efxc7179v5exrtbac9qza';
+ExamQuestionParagraph::query()->select('*')->groupBy('paragraph_id')->where('exam_id', $examId)->get();
+$examId = '01jq5efxc7179v5exrtbac9qza';
+ExamQuestionParagraph::query()->select('question_id')->groupBy('paragraph_id')->where('exam_id', $examId)->get();
+$examId = '01jq5efxc7179v5exrtbac9qza';
+ExamQuestionParagraph::query()->select('question_id')->where('exam_id', $examId)->get();
+$examId = '01jq5efxc7179v5exrtbac9qza';
+ExamQuestionParagraph::query()->select('paragraph_id,'question_id')->where('exam_id', $examId)->get();?>
+$examId = '01jq5efxc7179v5exrtbac9qza';
+ExamQuestionParagraph::query()->select('paragraph_id','question_id')->where('exam_id', $examId)->get();
+$examId = '01jq5efxc7179v5exrtbac9qza';
+ExamQuestionParagraph::where('exam_id', $examId)->get();
+$examId = '01jq5efxc7179v5exrtbac9qza';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->get();
 
-DB::table('exam_question')->join('paragraph_question', 'exam_question.question_id', '=', 'paragraph_question.question_id')->get()
-use Illuminate\Support\Facades\DB;
+$questions->groupBy('paragraph_id')
+$examId = '01jqczba6397nh165bfw4d2ngw';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->get();
 
-DB::table('exam_question')->leftJoin('paragraph_question', 'exam_question.question_id', '=', 'paragraph_question.question_id')->get()
-use Illuminate\Support\Facades\DB;
+$questions->groupBy('paragraph_id');
+$examId = '01jqczba6397nh165bfw4d2ngw';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->get();
 
-DB::table('exam_question')
-  ->leftJoin('paragraph_question', 'exam_question.question_id', '=', 'paragraph_question.question_id')
-  ->get()
-use Illuminate\Support\Facades\DB;
+$questions->groupBy('paragraph_id')->orderBy('order', 'asc');
+$examId = '01jqczba6397nh165bfw4d2ngw';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->get();
 
-DB::table('exam_question')
-  ->leftJoin('paragraph_question', 'exam_question.question_id', '=', 'paragraph_question.question_id')
-  ->groupBy('paragraph_id')
-  ->get()
-use Illuminate\Support\Facades\DB;
+$questions->groupBy('paragraph_id');
+$examId = '01jqczba6397nh165bfw4d2ngw';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->get();
 
-DB::table('exam_question')
-  ->leftJoin('paragraph_question', 'exam_question.question_id', '=', 'paragraph_question.question_id')
-  ->groupBy('paragraph_question.paragraph_id')
-  ->get()
-use Illuminate\Support\Facades\DB;
+$questions->groupBy('paragraph_id')->orderBy('order');
+$examId = '01jqczba6397nh165bfw4d2ngw';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->get();
 
-DB::table('exam_question')
-  ->leftJoin('paragraph_question', 'exam_question.question_id', '=', 'paragraph_question.question_id')
-  ->get()
-use Illuminate\Support\Facades\DB;
+$questions->orderBy('order')->groupBy('paragraph_id');
+$examId = '01jqczba6397nh165bfw4d2ngw';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->get();
 
-DB::table('exam_question')
-  ->leftJoin('paragraph_question', 'exam_question.question_id', '=', 'paragraph_question.question_id')
-  ->groupBy('paragraph_question.paragraph_id')
-  ->get()
-use Illuminate\Support\Facades\DB;
+$questions->orderBy('order')->groupBy('paragraph_id');
+$examId = '01jqczba6397nh165bfw4d2ngw';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->get();
 
-DB::table('exam_question')
-  ->leftJoin('paragraph_question', 'exam_question.question_id', '=', 'paragraph_question.question_id')
-  ->get()
-Exam::query()->with('questions')->get()
+$questions->orderBy('order')->groupBy('paragraph_id');
+$examId = '01jqczba6397nh165bfw4d2ngw';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->get();
+
+$questions->groupBy('paragraph_id');
+$examId = '01jqczba6397nh165bfw4d2ngw';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->orderBy('order')->get();
+
+$questions->groupBy('paragraph_id');
+$examId = '01jqczba6397nh165bfw4d2ngw';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->orderBy('order')->get()->groupBy('paragraph_id');
+
+$questions;
+$examId = '01jqczba6397nh165bfw4d2ngw';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->orderBy('order')->get()->groupBy('paragraph_id');
+
+$questions;
+$examId = '01jqczba6397nh165bfw4d2ngw';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->orderBy('order')->get()->groupBy('paragraph_id');
+
+$questions;
+$examId = '01jqczba6397nh165bfw4d2ngw';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->orderBy('order')->get()->groupBy('paragraph_id');
+
+$questions;
+$examId = '01jqczba6397nh165bfw4d2ngw';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->orderBy('order')->get()->groupBy('paragraph_id');
+
+$questions;
+$examId = '01jqczba6397nh165bfw4d2ngw';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->orderBy('order')->get()->groupBy('paragraph_id')->all();
+
+$questions;
+$examId = '01jqczba6397nh165bfw4d2ngw';
+$questions = ExamQuestionParagraph::with('question')->where('exam_id', $examId)->orderBy('order')->get()->groupBy('paragraph_id')->all();
+
+$questions;
+$examId = '01jqczba6397nh165bfw4d2ngw';
+$questions = ExamQuestionParagraph::with('question', 'paragraph')->where('exam_id', $examId)->orderBy('order')->get()->groupBy('paragraph_id')->all();
+
+$questions;
+$examId = '01jqczba6397nh165bfw4d2ngw';
+$questions = ExamQuestionParagraph::with('question')->where('exam_id', $examId)->orderBy('order')->get()->groupBy('paragraph_id')->all();
+
+$questions;

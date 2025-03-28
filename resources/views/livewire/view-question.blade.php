@@ -1,5 +1,5 @@
 <div>
-    <div class="bg-white border border-gray-100 rounded-lg p-4 shadow-md w-full">
+    <div class="bg-white border border-gray-300 rounded-lg p-4 w-full">
         <div class="flex justify-between items-center">
             <div class="flex items-center space-x-2 gap-2">
                 <!-- tampilkan tipe soal -->

@@ -20,6 +20,18 @@ class Paragraph extends Model
 
     public function questions()
     {
-        return $this->belongsToMany(Question::class, 'paragraph_question');
+        return $this->belongsToMany(Question::class, 'exam_question_paragraph')
+            ->withPivot('exam_id');
+    }
+
+    public function exams()
+    {
+        return $this->belongsToMany(Exam::class, 'exam_question_paragraph')
+            ->withPivot('question_id');
+    }
+
+    public function examquestionparagraphs()
+    {
+        return $this->hasMany(ExamQuestionParagraph::class);
     }
 }

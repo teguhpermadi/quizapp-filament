@@ -17,7 +17,7 @@ class ParagraphFactory extends Factory
     public function definition(): array
     {
         return [
-            'paragraph' => fake()->paragraph(10),
+            'paragraph' => fake()->paragraph(50),
         ];
     }
 }

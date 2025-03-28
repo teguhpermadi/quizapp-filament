@@ -33,6 +33,18 @@ class Exam extends Model
 
     public function questions()
     {
-        return $this->belongsToMany(Question::class, 'exam_question');
+        return $this->belongsToMany(Question::class, 'exam_question_paragraph')
+            ->withPivot('paragraph_id');
+    }
+
+    public function paragraphs()
+    {
+        return $this->belongsToMany(Paragraph::class, 'exam_question_paragraph')
+            ->withPivot('question_id');
+    }
+
+    public function examquestionparagraphs()
+    {
+        return $this->hasMany(ExamQuestionParagraph::class);
     }
 }
