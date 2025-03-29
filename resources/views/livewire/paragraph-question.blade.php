@@ -8,7 +8,7 @@
         </div>
         @foreach ($questions as $question)
         <div class="my-3">
-            @livewire('view-question', ['question' => $question->question])
+            @livewire('view-question', ['question' => $question])
         </div>
         @endforeach
     </div>

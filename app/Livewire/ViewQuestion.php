@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\Question;
 use Livewire\Component;
 
 class ViewQuestion extends Component

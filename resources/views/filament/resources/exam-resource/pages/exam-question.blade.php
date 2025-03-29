@@ -4,15 +4,12 @@
         {{ $this->form }}
     </x-filament-panels::form>
 
-    @foreach ($questionsGrouped as $questionGrouped => $questions)
-        @if ($questionGrouped)
-            @livewire('paragraph-question', ['paragraph' => $questionGrouped, 'questions' => $questions])
+    @foreach ($questionsGrouped as $questionGrouped => $value)
+        @if ($value->paragraph)
+            @livewire('paragraph-question', ['paragraph' => $value->paragraph, 'questions' => $value->questions])
         @else
-            @foreach ($questions as $question)
-                @livewire('view-question', ['question' => $question->question])
-            @endforeach
+            @livewire('view-question', ['question' => $value->question])
         @endif
-
     @endforeach
 
     @livewire('view-paragraph')

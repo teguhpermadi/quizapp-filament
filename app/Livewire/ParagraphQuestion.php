@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\Paragraph;
+use App\Models\Question;
 use Livewire\Component;
 
 class ParagraphQuestion extends Component
@@ -11,7 +12,7 @@ class ParagraphQuestion extends Component
 
     public function mount($paragraph, $questions)
     {
-        $this->paragraph = Paragraph::find($paragraph);
+        $this->paragraph = $paragraph;
         $this->questions = $questions;
     }
     public function render()

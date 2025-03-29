@@ -1,16 +1,4260 @@
-$examId = '01jqfpa6yfzpgb90cjf74bwqr6';
-$questions = ExamQuestionParagraph::with('question')->where('exam_id', $examId)->orderBy('order')->get()->groupBy('paragraph_id')->all();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->get();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->count();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
 
-$questions;
-$examId = '01jqfpa6yfzpgb90cjf74bwqr6';
-$questions = ExamQuestionParagraph::where('exam_id', $examId)->orderBy('order')->get()->groupBy('paragraph_id')->all();
+$format = [];
+
+foreach($questions as $question => $value){
+$format[] = $question;
+}
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$format = [];
+
+foreach($questions as $question => $value){
+$format[] = $question;
+}
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$format = [];
+
+foreach($questions as $question => $value){
+$format[] = $question;
+}
 
 $questions;
 $examId = '01jqfx9sr66gj0mxjp80nr1w12';
-$questions = ExamQuestionParagraph::where('exam_id', $examId)->orderBy('order')->get()->groupBy('paragraph_id')->all();
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
 
-$questions;all
+$format = [];
+
+foreach($questions as $question => $value){
+$format[$value[0]['order']] = $question;
+}
+
+
+$format;
 $examId = '01jqfx9sr66gj0mxjp80nr1w12';
-$questions = ExamQuestionParagraph::where('exam_id', $examId)->orderBy('order')->get()->groupBy('paragraph_id')->all();
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$format = [];
+
+foreach($questions as $question => $value){
+$format[$value[0]['order']] = [
+'paragrap_id' => $question
+];
+}
+
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$format = [];
+
+foreach($questions as $question => $value){
+$format[$value[0]['order']] = [
+'paragrap_id' => $question,
+  'questions' => $value->pluck('id')
+];
+}
+
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$format = [];
+
+foreach($questions as $question => $value){
+$format[$value[0]['order']] = [
+	'paragrap_id' => $question,
+  
+];
+}
+
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questionsWithParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$format = [];
+
+foreach($questionsWithParagraph as $questionWithParagraph => $valueParagraph){
+$format[$valueParagraph[0]['order']] = [
+	'paragrap_id' => $questionWithParagraph,
+  
+];
+}
+
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questionsWithParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$format = [];
+
+foreach($questionsWithParagraph as $questionWithParagraph => $valueParagraph){
+$format[$valueParagraph[0]['order']] = [
+	'paragrap_id' => $questionWithParagraph,
+  
+];
+}
+
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questionsWithParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$format = [];
+
+foreach($questionsWithParagraph as $questionWithParagraph => $valueParagraph){
+$format[$valueParagraph[0]['order']] = [
+	'paragrap_id' => $questionWithParagraph,
+  
+];
+}
+
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questionsWithParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$format = [];
+
+foreach($questionsWithParagraph as $questionWithParagraph => $valueParagraph){
+$format[$valueParagraph[0]['order']] = [
+	'paragrap_id' => $questionWithParagraph,
+  
+];
+}
+
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questionsWithParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$format = [];
+
+foreach($questionsWithParagraph as $questionWithParagraph => $valueParagraph){
+$format[$valueParagraph[0]['order']] = [
+	'paragrap_id' => $questionWithParagraph,
+	'questions' => $value->pluck('id'),
+];
+}
+
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questionsWithParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$format = [];
+
+foreach($questionsWithParagraph as $questionWithParagraph => $valueParagraph){
+$format[$valueParagraph[0]['order']] = [
+	'paragrap_id' => $questionWithParagraph,
+	'questions' => $valueParagraph->pluck('id'),
+];
+}
+
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questionsWithParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+$format = [];
+
+foreach($questionsWithParagraph as $questionWithParagraph => $valueParagraph){
+$format[$valueParagraph[0]['order']] = [
+	'paragrap_id' => $questionWithParagraph,
+	'questions' => $valueParagraph->pluck('id'),
+];
+}
+
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questionsWithParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+$format = [];
+
+foreach($questionsWithParagraph as $questionWithParagraph => $valueParagraph){
+$format[$valueParagraph[0]['order']] = [
+	'paragrap_id' => $questionWithParagraph,
+	'questions' => $valueParagraph->pluck('id'),
+];
+}
 
 $questions;
+
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questionsWithParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+$format = [];
+
+foreach($questionsWithParagraph as $questionWithParagraph => $valueParagraph){
+  $format[$valueParagraph[0]['order']] = [
+	  'paragrap_id' => $questionWithParagraph,
+	  'questions' => $valueParagraph->pluck('id'),
+  ];
+}
+
+foreach($questions as $question){
+	$format[$question->order] = [
+		'paragrap_id' => null,
+	  	'question' => $question,
+	];	
+}
+
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questionsWithParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+$format = array();
+
+foreach($questionsWithParagraph as $questionWithParagraph => $valueParagraph){
+  $format[$valueParagraph[0]['order']] = [
+	  'paragrap_id' => $questionWithParagraph,
+	  'questions' => $valueParagraph->pluck('id'),
+  ];
+}
+
+foreach($questions as $question){
+	$format[$question->order] = [
+		'paragrap_id' => null,
+	  	'question' => $question,
+	];	
+}
+
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questionsWithParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+$format = array();
+
+foreach($questionsWithParagraph as $questionWithParagraph => $valueParagraph){
+  $format[$valueParagraph[0]['order']] = [
+	  'paragrap_id' => $questionWithParagraph,
+	  'questions' => $valueParagraph->pluck('id'),
+  ];
+}
+
+foreach($questions as $question){
+	$format[$question->order] = [
+		'paragrap_id' => null,
+	  	'question' => $question->id,
+	];	
+}
+
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questionsWithParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+$format = array();
+
+foreach($questionsWithParagraph as $questionWithParagraph => $valueParagraph){
+  $format[$valueParagraph[0]['order']] = [
+	  'paragrap_id' => $questionWithParagraph,
+	  'questions' => $valueParagraph->pluck('id'),
+  ];
+}
+
+foreach($questions as $question){
+	$format[$question->order] = [
+		'paragrap_id' => null,
+	  	'question' => $question->id,
+	];	
+}
+
+
+ksort($format);
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questionsWithParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+$format = array();
+
+foreach($questionsWithParagraph as $questionWithParagraph => $valueParagraph){
+  $format[$valueParagraph[0]['order']] = [
+	  'paragrap_id' => $questionWithParagraph,
+	  'questions' => $valueParagraph->pluck('id'),
+  ];
+}
+
+foreach($questions as $question){
+	$format[$question->order] = [
+		'paragrap_id' => null,
+	  	'question' => $question->id,
+	];	
+}
+
+
+ksort($format);
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+        $questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $this->record->id)->has('paragraph')->get()->groupBy('paragraph_id');
+
+        
+        $questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $this->record->id)->doesnthave('paragraph')->get();
+
+        
+        $format = collect();
+
+        
+        
+        
+        
+        foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+            $format = \collect([
+                $questionHasParagraph => [
+                    'paragrap_id' => $valueParagraph[0]->paragraph_id,
+                    'question' => $valueParagraph,
+                ],
+            ]);
+        }
+
+        
+        
+        
+        
+        foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+            $format[$questionDoesntHaveParagraph->order] = [
+                'paragrap_id' => null,
+                'question' => $questionDoesntHaveParagraph,
+            ];
+        }
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+
+
+
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format = \collect([
+	$questionHasParagraph => [
+	  'paragrap_id' => $valueParagraph[0]->paragraph_id,
+	  'question' => $valueParagraph,
+	],
+  ]);
+}
+
+
+
+
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format[$questionDoesntHaveParagraph->order] = [
+	'paragrap_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format = \collect([
+	$questionHasParagraph => [
+	  'paragrap_id' => $valueParagraph[0]->paragraph_id,
+	  'question' => $valueParagraph,
+	],
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format[$questionDoesntHaveParagraph->order] = [
+	'paragrap_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format = \collect([
+	$valueParagraph[0]->order => [
+	  'paragrap_id' => $valueParagraph[0]->paragraph_id,
+	  'question' => $valueParagraph,
+	],
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format[$questionDoesntHaveParagraph->order] = [
+	'paragrap_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+  $questionHasParagraph => [
+                    'paragrap_id' => $valueParagraph[0]->paragraph_id,
+                    'question' => $valueParagraph,
+                ],
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format[$questionDoesntHaveParagraph->order] = [
+	'paragrap_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+  $valueParagraph[0]->order => [
+                    'paragrap_id' => $valueParagraph[0]->paragraph_id,
+                    'question' => $valueParagraph,
+                ],
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format[$questionDoesntHaveParagraph->order] = [
+	'paragrap_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push(
+  $valueParagraph[0]->order => [
+                    'paragrap_id' => $valueParagraph[0]->paragraph_id,
+                    'question' => $valueParagraph,
+                ],
+  );
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format[$questionDoesntHaveParagraph->order] = [
+	'paragrap_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push(
+  $valueParagraph[0]->order => [
+                    'paragrap_id' => $valueParagraph[0]->paragraph_id,
+                    'question' => $valueParagraph,
+                ];
+  );
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format[$questionDoesntHaveParagraph->order] = [
+	'paragrap_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+  $valueParagraph[0]->order => [
+                    'paragrap_id' => $valueParagraph[0]->paragraph_id,
+                    'question' => $valueParagraph,
+                ],
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format[$questionDoesntHaveParagraph->order] = [
+	'paragrap_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questionsWithParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+$format = [];
+
+foreach($questionsWithParagraph as $questionWithParagraph => $valueParagraph){
+  $format[$valueParagraph[0]['order']] = [
+	  'paragrap_id' => $questionWithParagraph,
+	  'questions' => $valueParagraph->pluck('id'),
+  ];
+}
+
+foreach($questions as $question){
+	$format[$question->order] = [
+		'paragrap_id' => null,
+	  	'question' => $question->id,
+	];	
+}
+
+ksort($format);
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format[$valueParagraph[0]['order']] = [
+	'paragrap_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format[$questionDoesntHaveParagraph->order] = [
+	'paragrap_id' => null,
+	'question' => $questionDoesntHaveParagraph->id,
+  ];
+}
+
+ksort($format);
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format[$valueParagraph[0]['order']] = [
+	'paragrap_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format[$questionDoesntHaveParagraph->order] = [
+	'paragrap_id' => null,
+	'question' => $questionDoesntHaveParagraph->id,
+  ];
+}
+
+ksort($format);
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('paragraph', 'question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+$questionsHasParagraph;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('paragraph', 'question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format = collect([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->question,
+	]
+  ]);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('paragraph', 'question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format = collect([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph,
+	]
+  ]);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('paragraph', 'question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format = collect([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question'),
+	]
+  ]);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('paragraph', 'question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format = collect([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph->paragraph,
+	  'questions' => $valueParagraph->pluck('question'),
+	]
+  ]);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('paragraph', 'question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format = collect([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question'),
+	]
+  ]);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('paragraph', 'question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format = collect([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question'),
+	]
+  ]);
+}
+
+$questionsHasParagraph
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('paragraph', 'question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format = collect([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question'),
+	]
+  ]);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('paragraph', 'question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question'),
+	]
+  ]);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('paragraph', 'question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question_id'),
+	]
+  ]);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('paragraph', 'question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question_id'),
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ]);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('paragraph', 'question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question_id'),
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push();
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('paragraph', 'question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question_id'),
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order
+  ]);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('paragraph', 'question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question_id'),
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+  ]
+  ]);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('paragraph', 'question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question_id'),
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph
+  ]
+  ]);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('paragraph', 'question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph,
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph
+  ]
+  ]);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with( 'question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph,
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph
+  ]
+  ]);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with( 'question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph,
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph
+  ]
+  ]);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph,
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph
+  ]
+  ]);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question'),
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph
+  ]
+  ]);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question'),
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph
+  ]
+  ]);
+}
+
+$format->toArray()
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question')->toArray(),
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph->toArray()
+  ]
+  ]);
+}
+
+$format->toArray()
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question')->toArray(),
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph->toArray()
+  ]
+  ]);
+}
+
+$format->sort()->toArray()
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question')->toArray(),
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph->toArray()
+  ]
+  ]);
+}
+
+$format->sortBy()->toArray()
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question')->toArray(),
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph->toArray()
+  ]
+  ]);
+}
+
+$format->sort()->toArray()
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question')->toArray(),
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph->toArray()
+  ]
+  ]);
+}
+
+$format->sort()->toArray()
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question')->toArray(),
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph->toArray()
+  ]
+  ]);
+}
+
+$format->sort()->toArray()
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question')->toArray(),
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph->toArray()
+  ]
+  ]);
+}
+
+$format->toArray()
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question_id')->toArray(),
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph->toArray()
+  ]
+  ]);
+}
+
+$format->toArray()
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question_id')->toArray(),
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push(
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph->toArray()
+  ]
+  );
+}
+
+$format->toArray()
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push(
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question_id')->toArray(),
+	]
+  );
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push(
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph->toArray()
+  ]
+  );
+}
+
+$format->toArray()
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push(
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question_id')->toArray(),
+	]
+  );
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push(
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph->toArray()
+  ]
+  );
+}
+
+$format->toArray()
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push(
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question_id')->toArray(),
+	]
+  );
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push(
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph->toArray()
+  ]
+  );
+}
+
+$format->toArray()
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question_id')->toArray(),
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph->toArray()
+  ]
+  ]);
+}
+
+$format->toArray()
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question_id')->toArray(),
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph->toArray()
+  ]
+  ]);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question_id')->toArray(),
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph->toArray()
+  ]
+  ]);
+}
+
+$format->sort()
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $format->push([
+	$valueParagraph[0]['order'] => [
+	  'paragraph_id' => $questionHasParagraph,
+	  'questions' => $valueParagraph->pluck('question_id')->toArray(),
+	]
+  ]);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph->toArray()
+  ]
+  ]);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+                'paragraph_id' => $questionHasParagraph,
+                'questions' => $valueParagraph->question,
+            ];
+  $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph->toArray()
+  ]
+  ]);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+                'paragraph_id' => $questionHasParagraph,
+                'questions' => $valueParagraph,
+            ];
+  $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph->toArray()
+  ]
+  ]);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+                'paragraph_id' => $questionHasParagraph,
+                'questions' => $valueParagraph->pluck('question_id'),
+            ];
+  $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $format->push([
+  $questionDoesntHaveParagraph->order => [
+  	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph->toArray()
+  ]
+  ]);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+  $format->merge($data);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+  $format->push($data);
+}
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+  
+}
+$format->push($data);
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format->sort()
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format->sortKey();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format->sort($data[0]);
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format->sort($data);
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format->sort([0]);
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format->sort([0]);
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format->sort([0]);
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format;
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$data = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$data = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$data = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$data = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$data = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$data = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$data = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$data = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$data = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$data = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$data = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$data = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$data = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$data = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$data = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$data = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$data = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format = collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$data = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format = collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$data = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format = collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$data = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format = collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$data = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format = collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$data = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format = collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$data = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format = collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->collect($data);
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = [];
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data[0]);
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] = [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data[$valueParagraph[0]['order']] => [
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => [$valueParagraph[0]['order']],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data[$questionDoesntHaveParagraph->order] = [
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => [$valueParagraph[0]['order']],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => [$valueParagraph[0]['order']],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+}
+
+$format->push($data);
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => [$valueParagraph[0]['order']],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+
+}
+
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => [$valueParagraph[0]['order']],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => [$valueParagraph[0]['order']],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format->sortBy('order');
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = collect([
+	'order' => [$valueParagraph[0]['order']],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ]);
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format->sortBy('order');
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = collect([
+	'order' => [$valueParagraph[0]['order']],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ]);
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = collect([
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ]);
+  $format->push($data);
+}
+
+
+$format->sortBy('order');
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => [$valueParagraph[0]['order']],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format->sortBy('order');
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => [$valueParagraph[0]['order']],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format->sortBy('order', 'asc');
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => [$valueParagraph[0]['order']],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format->sortBy('order');
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => [$valueParagraph[0]['order']],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => [$valueParagraph[0]['order']],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => [$valueParagraph[0]['order']]->first(),
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => [$valueParagraph[0]['order']]->first,
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => [$valueParagraph[0]['order']],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format->sortBy('order');
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format->sort();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format->sortBy(['order', 'asc']);
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format->sortBy(['order']);
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format->sortBy(['order']);
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format->sortBy(['order']);
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format->sortBy('order');
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format->sortBy('order');
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format->sortBy('order');
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format->sortBy('order');
+$collection = collect([1, 2, 3, 4]);
+ 
+$collection->push(5);
+$collection = collect([1 => 'tes', 2, 3, 4]);
+ 
+$collection->push(5);
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$format->sortBy('order');
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$tests = $format->sortBy('order');
+
+foreach($tests as $tes){
+$tes->order
+}
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$tests = $format->sortBy('order');
+
+foreach($tests as $tes){
+$tes->order;
+}
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$test = $format->sortBy('order');
+
+$test->first();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$test = $format->sortBy('order');
+
+$test->first()->order;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$test = $format->sortBy('order');
+
+$test->first();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$test = $format->sortBy('order');
+
+$test->first()->order;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$test = $format->sortBy('order');
+
+$test->first()['order']
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = [
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$test = $format->sortBy('order');
+
+$test->first();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = (object)[
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$test = $format->sortBy('order');
+
+$test->first();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = (object)[
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$test = $format->sortBy('order');
+
+$test->first()->order;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = (object)[
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$test = $format->sortBy('order');
+
+$test->first();
