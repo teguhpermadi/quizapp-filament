@@ -13,7 +13,6 @@ use Filament\Forms\Components\Fieldset;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Select;
-use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -42,9 +41,6 @@ class ExamResource extends Resource
                             ->required(),
                         TextArea::make('description')
                             ->label('Description'),
-                        TagsInput::make('tags')
-                            ->label('Tag')
-                            ->separator(','),
                         FileUpload::make('image')
                             ->label('Image')
                             ->image(),
@@ -92,11 +88,6 @@ class ExamResource extends Resource
                 TextColumn::make('questions_count')
                     ->counts('questions')
                     ->label('Questions'),
-                TextColumn::make('tags')
-                    ->badge()
-                    ->separator(',')
-                    ->searchable()
-                    ->sortable(),
             ])
             ->filters([
                 //

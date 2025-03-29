@@ -21,14 +21,9 @@ class Question extends Model
         'image',
         'explanation',
         'score',
-        'tags',
         'timer',
         'level',
         'teacher_id',
-    ];
-
-    protected $casts = [
-        'tags' => 'array',
     ];
 
     public function getTimerAttribute()

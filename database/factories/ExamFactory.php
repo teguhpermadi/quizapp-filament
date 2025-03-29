@@ -22,7 +22,6 @@ class ExamFactory extends Factory
             'title' => fake()->sentence(4),
             'image' => fake()->imageUrl(),
             'description' => fake()->paragraph(),
-            'tags' => fake()->word(),
         ];
     }
 }

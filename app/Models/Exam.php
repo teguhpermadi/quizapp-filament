@@ -19,11 +19,6 @@ class Exam extends Model
         'title',
         'image',
         'description',
-        'tags',
-    ];
-
-    protected $casts = [
-        'tags' => 'array',
     ];
 
     public function teacher()
