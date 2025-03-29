@@ -35,10 +35,10 @@ class ExamQuestion extends Page implements HasForms
         ]);
 
         // check questions with paragraph
-        $questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $this->record->id)->has('paragraph')->with('paragraph', 'question')->get()->groupBy('paragraph_id');
+        $questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $this->record->id)->has('paragraph')->with('paragraph', 'question.answers')->get()->groupBy('paragraph_id');
 
         // check questions without paragraph
-        $questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $this->record->id)->doesnthave('paragraph')->with('question')->get();
+        $questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $this->record->id)->doesnthave('paragraph')->with('question.answers')->get();
 
         // collect
         $format = collect();

@@ -4258,3 +4258,165 @@ foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
 $test = $format->sortBy('order');
 
 $test->first();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question.answer')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->with('question.answer')->get();
+
+
+$format = collect();
+
+foreach ($questionsHasParagraph as $questionHasParagraph => $valueParagraph) {
+  $data = (object)[
+	'order' => $valueParagraph[0]['order'],
+	'paragraph_id' => $questionHasParagraph,
+	'questions' => $valueParagraph->pluck('question_id'),
+  ];
+    $format->push($data);
+}
+
+foreach ($questionsDoesntHaveParagraph as $questionDoesntHaveParagraph) {
+  $data = [
+	'order' => $questionDoesntHaveParagraph->order,
+	'paragraph_id' => null,
+	'question' => $questionDoesntHaveParagraph,
+  ];
+  $format->push($data);
+}
+
+
+$test = $format->sortBy('order');
+
+$test->first();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question.answer')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->with('question.answer')->get();
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question.answer')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->with('question.answer')->get();
+
+$questionsHasParagraph
+$examId = '01jqgqjgbmat1f6hcww736ygtd';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question.answer')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->with('question.answer')->get();
+
+$questionsHasParagraph
+$examId = '01jqgqjgbmat1f6hcww736ygtd';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question.answer')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->with('question.answer')->get();
+
+$questionsHasParagraph
+$examId = '01jqgqjgbmat1f6hcww736ygtd';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question.answer')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->with('question.answer')->get();
+
+$questionsHasParagraph
+$examId = '01jqgqjgbmat1f6hcww736ygtd';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question.answer')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->with('question.answer')->get();
+
+$questionsHasParagraph
+$examId = '01jqgqjgbmat1f6hcww736ygtd';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question.answer')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->with('question.answer')->get();
+
+$questionsHasParagraph
+$examId = '01jqgqjgbmat1f6hcww736ygtd';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question.answers')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->with('question.answer')->get();
+
+$questionsHasParagraph
+$examId = '01jqgqjgbmat1f6hcww736ygtd';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question.answers')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->with('question.answer')->get();
+
+$questionsHasParagraph
+$examId = '01jqgqjgbmat1f6hcww736ygtd';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question.answers')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->with('question.answer')->get();
+
+$questionsHasParagraph
+$examId = '01jqgqjgbmat1f6hcww736ygtd';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question.answers')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->with('question.answer')->get();
+
+$questionsHasParagraph
+$examId = '01jqgqjgbmat1f6hcww736ygtd';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question.answers')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->with('question.answer')->get();
+
+$questionsHasParagraph
+$examId = '01jqgqjgbmat1f6hcww736ygtd';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question.answers')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->with('question.answer')->get();
+
+$questionsHasParagraph
+$examId = '01jqgqjgbmat1f6hcww736ygtd';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question.answer')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->with('question.answer')->get();
+
+$questionsHasParagraph
+$examId = '01jqgqjgbmat1f6hcww736ygtd';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question.answers')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->with('question.answer')->get();
+
+$questionsHasParagraph
+$examId = '01jqgqjgbmat1f6hcww736ygtd';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question.answers')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->with('question.answer')->get();
+
+$questionsHasParagraph
+$examId = '01jqgqjgbmat1f6hcww736ygtd';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question.answers')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->with('question.answers')->get();
+
+$questionsHasParagraph
+$examId = '01jqgqjgbmat1f6hcww736ygtd';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question.answers')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->with('question.answers')->get();
+
+$questionsHasParagraph
+$examId = '01jqgqjgbmat1f6hcww736ygtd';
+
+$questionsHasParagraph = ExamQuestionParagraph::where('exam_id', $examId)->has('paragraph')->with('question.answers')->get()->groupBy('paragraph_id');
+
+$questionsDoesntHaveParagraph = ExamQuestionParagraph::where('exam_id', $examId)->doesnthave('paragraph')->with('question.answers')->get();
+
+$questionsHasParagraph
