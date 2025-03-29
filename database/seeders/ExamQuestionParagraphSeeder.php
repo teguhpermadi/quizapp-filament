@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Enums\QuestionTypeEnum;
 use App\Models\Answer;
 use App\Models\Exam;
+use App\Models\ExamQuestionParagraph;
 use App\Models\Paragraph;
 use App\Models\Question;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -86,31 +87,48 @@ class ExamQuestionParagraphSeeder extends Seeder
         $paragraph_1 = Paragraph::factory()->count(1)->create()->first()->id;
         $count = 1;
         foreach ($multiple_choice_questions as $multiple_choice_question) {
-            $exam->first()->questions()->attach(
-                $multiple_choice_question->id,
-                ['paragraph_id' => $paragraph_1,
-                'order' => $count]
-            );
+            // $exam->first()->questions()->attach(
+            //     $multiple_choice_question->id,
+            //     ['paragraph_id' => $paragraph_1,
+            //     'order' => $count]
+            // );
+            ExamQuestionParagraph::create([
+                'exam_id' => $exam->first()->id,
+                'question_id' => $multiple_choice_question->id,
+                'paragraph_id' => $paragraph_1,
+                'order' => $count
+            ])->save();
             $count++;
         }
 
 
         foreach ($true_false_questions as $true_false_question) {
-            $exam->first()->questions()->attach(
-                $true_false_question->id,
-                ['order' => $count]
-            );
+            // $exam->first()->questions()->attach(
+            //     $true_false_question->id,
+            //     ['order' => $count]
+            // );
+            ExamQuestionParagraph::create([
+                'exam_id' => $exam->first()->id,
+                'question_id' => $true_false_question->id,
+                'order' => $count
+            ])->save();
             $count++;
         }
 
         // attach multiple answer questions to exam
         $paragraph_2 = Paragraph::factory()->count(1)->create()->first()->id;
         foreach ($multiple_answer_questions as $multiple_answer_question) {
-            $exam->first()->questions()->attach(
-                $multiple_answer_question->id,
-                ['paragraph_id' => $paragraph_2,
-                'order' => $count]
-            );
+            // $exam->first()->questions()->attach(
+            //     $multiple_answer_question->id,
+            //     ['paragraph_id' => $paragraph_2,
+            //     'order' => $count]
+            // );
+            ExamQuestionParagraph::create([
+                'exam_id' => $exam->first()->id,
+                'question_id' => $multiple_answer_question->id,
+                'paragraph_id' => $paragraph_2,
+                'order' => $count
+            ])->save();
             $count++;
         }
     }

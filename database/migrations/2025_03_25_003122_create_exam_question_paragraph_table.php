@@ -12,10 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('exam_question_paragraph', function (Blueprint $table) {
+            $table->ulid('id')->primary();
             $table->foreignUlid('exam_id')->constrained()->cascadeOnDelete();
             $table->foreignUlid('question_id')->constrained()->cascadeOnDelete();
             $table->foreignUlid('paragraph_id')->nullable()->constrained()->cascadeOnDelete();
             $table->integer('order')->default(0);
+            $table->timestamps();
             $table->unique(['exam_id', 'question_id'], 'exam_question_unique');
         });
     }
