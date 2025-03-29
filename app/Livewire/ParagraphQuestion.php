@@ -18,4 +18,9 @@ class ParagraphQuestion extends Component
     {
         return view('livewire.paragraph-question');
     }
+
+    public function viewParagraph($paragraph)
+    {
+        $this->dispatch('view-paragraph', $paragraph);
+    }
 }
