@@ -6,3 +6,11 @@ $examId = '01jqfpa6yfzpgb90cjf74bwqr6';
 $questions = ExamQuestionParagraph::where('exam_id', $examId)->orderBy('order')->get()->groupBy('paragraph_id')->all();
 
 $questions;
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->orderBy('order')->get()->groupBy('paragraph_id')->all();
+
+$questions;all
+$examId = '01jqfx9sr66gj0mxjp80nr1w12';
+$questions = ExamQuestionParagraph::where('exam_id', $examId)->orderBy('order')->get()->groupBy('paragraph_id')->all();
+
+$questions;

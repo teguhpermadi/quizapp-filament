@@ -83,15 +83,51 @@ class ExamQuestionParagraphSeeder extends Seeder
             ->count(5)
             ->create();
 
+        // short answer question
+        $short_answer_questions = Question::factory()
+            ->state([
+                'question_type' => QuestionTypeEnum::SHORT_ANSWER,
+            ])
+            ->has(Answer::factory()
+                ->shortAnswer()
+                ->count(1))
+            ->count(5)
+            ->create();
+
+        // matching question
+        $matching_questions = Question::factory()
+            ->state([
+                'question_type' => QuestionTypeEnum::MATCHING,
+            ])
+            ->has(Answer::factory()
+                ->matching()
+                ->count(4))
+            ->count(5)
+            ->create();
+
+        // ordering question
+        $ordering_questions = Question::factory()
+            ->state([
+                'question_type' => QuestionTypeEnum::ORDERING,
+            ])
+            ->has(Answer::factory()
+                ->ordering()
+                ->count(4))
+            ->count(5)
+            ->create();
+
+        // essay question
+        $essay_questions = Question::factory()
+            ->state([
+                'question_type' => QuestionTypeEnum::ESSAY,
+            ])
+            ->count(5)
+            ->create();
+
         // attach question, paragraph to exam
         $paragraph_1 = Paragraph::factory()->count(1)->create()->first()->id;
         $count = 1;
         foreach ($multiple_choice_questions as $multiple_choice_question) {
-            // $exam->first()->questions()->attach(
-            //     $multiple_choice_question->id,
-            //     ['paragraph_id' => $paragraph_1,
-            //     'order' => $count]
-            // );
             ExamQuestionParagraph::create([
                 'exam_id' => $exam->first()->id,
                 'question_id' => $multiple_choice_question->id,
@@ -103,10 +139,6 @@ class ExamQuestionParagraphSeeder extends Seeder
 
 
         foreach ($true_false_questions as $true_false_question) {
-            // $exam->first()->questions()->attach(
-            //     $true_false_question->id,
-            //     ['order' => $count]
-            // );
             ExamQuestionParagraph::create([
                 'exam_id' => $exam->first()->id,
                 'question_id' => $true_false_question->id,
@@ -118,15 +150,54 @@ class ExamQuestionParagraphSeeder extends Seeder
         // attach multiple answer questions to exam
         $paragraph_2 = Paragraph::factory()->count(1)->create()->first()->id;
         foreach ($multiple_answer_questions as $multiple_answer_question) {
-            // $exam->first()->questions()->attach(
-            //     $multiple_answer_question->id,
-            //     ['paragraph_id' => $paragraph_2,
-            //     'order' => $count]
-            // );
             ExamQuestionParagraph::create([
                 'exam_id' => $exam->first()->id,
                 'question_id' => $multiple_answer_question->id,
                 'paragraph_id' => $paragraph_2,
+                'order' => $count
+            ])->save();
+            $count++;
+        }
+
+        // attach short answer questions to exam
+        foreach ($short_answer_questions as $short_answer_question) {
+            ExamQuestionParagraph::create([
+                'exam_id' => $exam->first()->id,
+                'question_id' => $short_answer_question->id,
+                'order' => $count
+            ])->save();
+            $count++;
+        }
+
+        // attach matching questions to exam
+        $paragraph_3 = Paragraph::factory()->count(1)->create()->first()->id;
+        foreach ($matching_questions as $matching_question) {
+            ExamQuestionParagraph::create([
+                'exam_id' => $exam->first()->id,
+                'question_id' => $matching_question->id,
+                'paragraph_id' => $paragraph_3,
+                'order' => $count
+            ])->save();
+            $count++;
+        }
+
+        // attach ordering questions to exam
+        foreach ($ordering_questions as $ordering_question) {
+            ExamQuestionParagraph::create([
+                'exam_id' => $exam->first()->id,
+                'question_id' => $ordering_question->id,
+                'order' => $count
+            ])->save();
+            $count++;
+        }
+
+        // attach essay questions to exam
+        $paragraph_4 = Paragraph::factory()->count(1)->create()->first()->id;
+        foreach ($essay_questions as $essay_question) {
+            ExamQuestionParagraph::create([
+                'exam_id' => $exam->first()->id,
+                'question_id' => $essay_question->id,
+                'paragraph_id' => $paragraph_4,
                 'order' => $count
             ])->save();
             $count++;
