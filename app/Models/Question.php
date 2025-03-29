@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Spatie\Tags\HasTags;
 
 class Question extends Model
 {
@@ -14,6 +15,7 @@ class Question extends Model
     use HasFactory;
     use HasUlids;
     use SoftDeletes;
+    use HasTags;
 
     protected $fillable = [
         'question',

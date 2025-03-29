@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Enums\QuestionTypeEnum;
+use App\Models\Question;
 use App\Models\Teacher;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -31,5 +32,17 @@ class QuestionFactory extends Factory
             'level' => fake()->randomElement(['easy', 'medium', 'hard']),
             'teacher_id' => Teacher::get()->random()->id,
         ];
+    }
+
+    /**
+     * Configure the model factory.
+     */
+    public function configure(): static
+    {
+        return $this->afterMaking(function (Question $question) {
+            // ...
+        })->afterCreating(function (Question $question) {
+            $question->attachTag('tag-'. strval(fake()->numberBetween(1, 3)));
+        });
     }
 }
