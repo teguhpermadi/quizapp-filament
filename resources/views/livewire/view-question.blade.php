@@ -7,15 +7,22 @@
                 <!-- tampilkan score -->
                 <div class="px-2 py-1">
                     <!-- buatkan class dari taildwind yang bagus untuk label dan select score berikut ini -->
-                    <label for="score" class="text-gray-600">Skor:</label>
-                    <select wire:model.live="score" wire:loading.class="opacity-50" wire:loading.attr="disabled" id="score_{{$question->id}}" class="border rounded-md px-2 py-1 text-sm text-gray-600">
+                    <label for="score" class="text-gray-600">Score:</label>
+                    <select wire:model.live="score" wire:loading.class="opacity-50" wire:loading.attr="disabled" id="score_{{$question->id}}" class="border rounded-md px-2 py-1 text-sm text-gray-600 !bg-none">
                         @foreach ($scores as $scoreEnum)
                             <option value="{{ $scoreEnum->value }}">{{ $scoreEnum->getLabel() }}</option>
                         @endforeach
                     </select>
                 </div>
                 <!-- tampilkan waktu -->
-                <span class="border rounded-md px-2 py-1 text-sm text-gray-600">Time: {{$question->timer}} seconds</span>
+                <div class="px-2 py-1">
+                    <label for="time" class="text-gray-600">Time:</label>
+                    <select wire:model.live="timer" wire:loading.class="opacity-50" wire:loading.attr="disabled" id="time_{{$question->id}}" class="border rounded-md px-2 py-1 text-sm text-gray-600 !bg-none">
+                        @foreach ($timers as $timerEnum)
+                            <option value="{{ $timerEnum->value }}">{{ $timerEnum->getLabel() }}</option>
+                        @endforeach
+                    </select>
+                </div>
             </div>
             <div class="flex items-center space-x-2">
                 <!-- tampilkan tombol edit -->

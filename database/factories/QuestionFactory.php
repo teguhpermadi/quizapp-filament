@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Enums\QuestionTypeEnum;
 use App\Enums\ScoreEnum;
+use App\Enums\TimerEnum;
 use App\Models\Question;
 use App\Models\Teacher;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -29,7 +30,7 @@ class QuestionFactory extends Factory
             'image' => $faker->imageUrl(),
             'explanation' => fake()->realText(),
             'score' => fake()->randomElement(ScoreEnum::class),
-            'timer' => fake()->time(),
+            'timer' => fake()->randomElement(TimerEnum::class),
             'level' => fake()->randomElement(['easy', 'medium', 'hard']),
             'teacher_id' => Teacher::get()->random()->id,
         ];
