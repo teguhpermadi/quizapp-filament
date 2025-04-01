@@ -28,6 +28,10 @@ class Question extends Model
         'teacher_id',
     ];
 
+    protected $casts = [
+        'score' => 'integer',
+    ];
+
     public function getTimerAttribute()
     {
         return Carbon::createFromTimestampMs($this->attributes['timer'])->timestamp;

@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Enums\QuestionTypeEnum;
+use App\Enums\ScoreEnum;
 use App\Models\Question;
 use App\Models\Teacher;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -27,7 +28,7 @@ class QuestionFactory extends Factory
             'question_type' => fake()->randomElement(QuestionTypeEnum::class),
             'image' => $faker->imageUrl(),
             'explanation' => fake()->realText(),
-            'score' => fake()->numberBetween(1, 10),
+            'score' => fake()->randomElement(ScoreEnum::class),
             'timer' => fake()->time(),
             'level' => fake()->randomElement(['easy', 'medium', 'hard']),
             'teacher_id' => Teacher::get()->random()->id,
@@ -39,9 +40,7 @@ class QuestionFactory extends Factory
      */
     public function configure(): static
     {
-        return $this->afterMaking(function (Question $question) {
-            // ...
-        })->afterCreating(function (Question $question) {
+        return $this->afterCreating(function (Question $question) {
             $question->attachTag('tag-'. strval(fake()->numberBetween(1, 3)));
         });
     }

@@ -4,3 +4,12 @@ Question::withAllTags('tag-1')->get();
 Question::withAllTags('tag-1')->count();
 Question::withAllTags('tag-2')->count();
 Question::withAllTags('tag-3')->count();
+Question::withAllTags('tag-3')->count();
+Question::all()
+Question::all()
+Question::all()
+Question::all()
+Question::all()
+Question::all()
+Question::all()
+Question::first()
