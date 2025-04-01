@@ -43,6 +43,11 @@ class ViewQuestion extends Component
             ->send();
     }
 
+    public function viewExplanation($questionId)
+    {
+        $this->dispatch('view-explanation', $questionId);
+    }
+
     public function editQuestion($questionId)
     {
         $this->emit('editQuestion', $questionId);
