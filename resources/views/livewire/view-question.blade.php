@@ -75,5 +75,9 @@
             <p class="text-sm">{{ Str::limit($question->explanation, 100) }}</p>
             <button class="no-underline hover:underline text-sm text-gray-600" wire:click="viewExplanation('{{ $question->id }}')">More Explanation</button>
         </div>
+        <div class="border-t mt-6"></div>
+        <div class="mt-2">
+            @livewire('question-tags', ['question' => $question])
+        </div>
     </div>
 </div>

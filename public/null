@@ -1,15 +1,222 @@
-Question::withAllTags()->get()
-Question::withAllTags()->get();
-Question::withAllTags('tag-1')->get();
-Question::withAllTags('tag-1')->count();
-Question::withAllTags('tag-2')->count();
-Question::withAllTags('tag-3')->count();
-Question::withAllTags('tag-3')->count();
-Question::all()
-Question::all()
-Question::all()
-Question::all()
-Question::all()
-Question::all()
-Question::all()
-Question::first()
+Question::hasTag('tag-1')->get()
+Question::first()->hasTag('tag-1')
+Question::first()->hasTag('tag-1')
+Question::withAnyTags('tag-1')
+Question::withAnyTags('tag-1')->get()
+Question::withAnyTags('tag-1')->count()
+use Spatie\Tags\Tag;
+
+Tag::get()
+use Spatie\Tags\Tag;
+
+Tag::get()
+use Spatie\Tags\Tag;
+
+
+Question::withAnyTags('zaydan')->get()
+use Spatie\Tags\Tag;
+
+
+Question::withAnyTags('zaydan')->get()
+use Spatie\Tags\Tag;
+
+
+Question::withAnyTags('zaydan')->get()
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::count();
+
+use Spatie\Tags\Tag;
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+Tag::where('name', '"{"en": "zaydan"}"')->get();
+
+use Spatie\Tags\Tag;
+
+Tag::where('name', '"{"en": "zaydan"}"')->first();
+
+use Spatie\Tags\Tag;
+
+Tag::find(18);
+
+use Spatie\Tags\Tag;
+
+Tag::where('name.en', 'zaydan')->get();
+
+use Spatie\Tags\Tag;
+
+Tag::whereJsonContains('name', ['en'=>'zaydan'])->get()
+
+use Spatie\Tags\Tag;
+
+Tag::whereJsonContains('name', ['en'=>'zaydan'])->first()
+
+use Spatie\Tags\Tag;
+
+Tag::whereJsonContains('name', ['en'=>'zaydan'])->delete()
+
+use Spatie\Tags\Tag;
+
+Tag::whereJsonContains('name', ['en'=>'zaydan'])->get()
+
+use Spatie\Tags\Tag;
+
+
+Question::withAnyTags('zaydan')->get()
+use Spatie\Tags\Tag;
+
+
+Question::withAnyTags('zaydan')->get()
+use Spatie\Tags\Tag;
+
+
+Question::withAnyTags('zaydan')->get()
+use Spatie\Tags\Tag;
+
+Tag::whereJsonContains('name', ['en'=>'zaydan'])->get()
+
+use Spatie\Tags\Tag;
+
+Tag::whereJsonContains('name', ['en'=>'zaydan'])->get()
+
+use Spatie\Tags\Tag;
+
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+
+Tag::get();
+
+use Spatie\Tags\Tag;
+
+
+
+Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get();
+
