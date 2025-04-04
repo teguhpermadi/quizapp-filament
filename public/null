@@ -383,3 +383,31 @@ $search = 'tes';
 
 
 Question::withAnyTags('zaydan', '01jqj1hrcam3j4vp1x5v6pvp7q')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+Tag::query()->where('name->en', 'LIKE', "%{$search}%")->get()
+
+use Spatie\Tags\Tag;
+$search = 'zaydan';
+
+
+
+Tag::query()->where('name->en', 'LIKE', "%{$search}%")->get()
+
+use Spatie\Tags\Tag;
+$search = 'zaydan';
+
+
+
+Tag::query()->where('name->en', 'LIKE', "%{$search}%")->get()->pluck('name')
+
+use Spatie\Tags\Tag;
+$search = 'zaydan';
+
+Tag::get();
+
+
+

@@ -38,10 +38,10 @@
             </div>
         </div>
 
-        <div class="mt-6">
+        <div class="mt-2">
             <p class="text-md">{{$question->question}}</p>
         </div>
-        <div class="mt-6">
+        <div class="mt-2">
             @switch($question->question_type)
             @case('multiple choice')
             @livewire('multiple-choice-answer', ['question' => $question])
@@ -69,13 +69,13 @@
             @endswitch
         </div>
         <!-- buatkan garis pembatas -->
-        <div class="border-t mt-6"></div>
+        <div class="border-t mt-2"></div>
         <div class="mt-2">
             <p class="text-sm text-gray-600">Explanation</p>
             <p class="text-sm">{{ Str::limit($question->explanation, 100) }}</p>
             <button class="no-underline hover:underline text-sm text-gray-600" wire:click="viewExplanation('{{ $question->id }}')">More Explanation</button>
         </div>
-        <div class="border-t mt-6"></div>
+        <div class="border-t mt-2"></div>
         <div class="mt-2">
             @livewire('question-tags', ['question' => $question])
         </div>

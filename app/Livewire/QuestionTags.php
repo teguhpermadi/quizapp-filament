@@ -12,6 +12,7 @@ class QuestionTags extends Component
     public Question $question;
     public $tags = [];
     public $newTag = '';
+    public $results = [];
 
     public function mount(Question $question)
     {
@@ -38,9 +39,26 @@ class QuestionTags extends Component
         $this->tags = array_values(array_diff($this->tags, [$tag]));
     }
 
+    public function setTag($tag)
+    {
+        $authId = auth()->user()->id; // for type of tag
+        $this->question->attachTag($tag, $authId); 
+        $this->tags[] = $tag;
+        $this->newTag = '';
+    }
 
     public function render()
     {
+        if(\strlen($this->newTag) > 2) {
+            $this->results = Tag::where('name->en', 'LIKE', "%".$this->newTag."%")
+                                ->where('type', auth()->user()->id)
+                                ->whereNotIn('name->en', $this->tags)
+                                ->get()
+                                ->pluck('name');
+        } else {
+            $this->results = [];
+        }
+
         return view('livewire.question-tags');
     }
 }
