@@ -6,6 +6,6 @@
             <button type="button" wire:click="removeTag('{{ $tag }}')" class="ml-2 text-gray-800">×</button>
         </span>
         @endforeach
-        <input type="text" wire:model="newTag" wire:change="addTag" placeholder="Add New Tag" class="border rounded-full px-3 py-1 text-sm">
+        <input type="text" wire:model="newTag" wire:keydown.enter="addTag" placeholder="Add New Tag" class="border rounded-full px-3 py-1 text-sm">
     </div>
 </div>
