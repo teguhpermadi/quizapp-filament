@@ -33,14 +33,9 @@ class QuestionTags extends Component
 
     public function removeTag($tag)
     {
-        $this->question->detachTag($tag);
+        // detacth the tag and type from the question
+        $this->question->detachTag($tag, auth()->user()->id);
         $this->tags = array_values(array_diff($this->tags, [$tag]));
-
-        // delete the tag if it is not used by any other question
-        $checkTag = Question::withAnyTags($tag)->count();
-        if ($checkTag == 0) {
-            Tag::whereJsonContains('name', ['en'=>$tag])->delete();
-        }
     }
 
 

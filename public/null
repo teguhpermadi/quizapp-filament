@@ -1,222 +1,385 @@
-Question::hasTag('tag-1')->get()
-Question::first()->hasTag('tag-1')
-Question::first()->hasTag('tag-1')
-Question::withAnyTags('tag-1')
-Question::withAnyTags('tag-1')->get()
-Question::withAnyTags('tag-1')->count()
 use Spatie\Tags\Tag;
-
-Tag::get()
-use Spatie\Tags\Tag;
-
-Tag::get()
-use Spatie\Tags\Tag;
-
-
-Question::withAnyTags('zaydan')->get()
-use Spatie\Tags\Tag;
-
-
-Question::withAnyTags('zaydan')->get()
-use Spatie\Tags\Tag;
-
-
-Question::withAnyTags('zaydan')->get()
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::count();
-
-use Spatie\Tags\Tag;
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-Tag::where('name', '"{"en": "zaydan"}"')->get();
-
-use Spatie\Tags\Tag;
-
-Tag::where('name', '"{"en": "zaydan"}"')->first();
-
-use Spatie\Tags\Tag;
-
-Tag::find(18);
-
-use Spatie\Tags\Tag;
-
-Tag::where('name.en', 'zaydan')->get();
-
-use Spatie\Tags\Tag;
-
-Tag::whereJsonContains('name', ['en'=>'zaydan'])->get()
-
-use Spatie\Tags\Tag;
-
-Tag::whereJsonContains('name', ['en'=>'zaydan'])->first()
-
-use Spatie\Tags\Tag;
-
-Tag::whereJsonContains('name', ['en'=>'zaydan'])->delete()
-
-use Spatie\Tags\Tag;
-
-Tag::whereJsonContains('name', ['en'=>'zaydan'])->get()
-
-use Spatie\Tags\Tag;
-
-
-Question::withAnyTags('zaydan')->get()
-use Spatie\Tags\Tag;
-
-
-Question::withAnyTags('zaydan')->get()
-use Spatie\Tags\Tag;
-
-
-Question::withAnyTags('zaydan')->get()
-use Spatie\Tags\Tag;
-
-Tag::whereJsonContains('name', ['en'=>'zaydan'])->get()
-
-use Spatie\Tags\Tag;
-
-Tag::whereJsonContains('name', ['en'=>'zaydan'])->get()
-
-use Spatie\Tags\Tag;
-
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
-
-Tag::get();
-
-use Spatie\Tags\Tag;
-
+$search = 'tes';
 
 
 Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get();
 
+
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get();
+
+
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get();
+
+
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get();
+
+
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get();
+
+
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get();
+
+
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get();
+
+
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get();
+
+
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
+
+
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
+
+
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
+
+
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
+
+
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
+
+
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
+
+
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
+
+
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
+
+
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
+
+
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
+
+
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
+
+
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
+
+
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
+
+
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('tes')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('tess')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('tess')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('tess')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('tess')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('tess')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('tess')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('tess')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('tess')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('tess')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('tess')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('tess')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTag('tess')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('tess')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags(['tess'])->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags(['tess'])->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags(['tess'])->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags(['tes'])->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags(['withAnyTags'])->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags(['tes'])->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags(['tes'])->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags(['tes'])->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags(['tes'], '01jqj1hrcam3j4vp1x5v6pvp7q')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('tes', '01jqj1hrcam3j4vp1x5v6pvp7q')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('tess', '01jqj1hrcam3j4vp1x5v6pvp7q')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('tess', '01jqj1hrcam3j4vp1x5v6pvp7q')->count()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('tess', '01jqj1hrcam3j4vp1x5v6pvp7q')->count()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('tess', '01jqj1hrcam3j4vp1x5v6pvp7q')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('zaydan', '01jqj1hrcam3j4vp1x5v6pvp7q')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('zaydan', '01jqj1hrcam3j4vp1x5v6pvp7q')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('zaydan', '01jqj1hrcam3j4vp1x5v6pvp7q')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('zaydan', '01jqj1hrcam3j4vp1x5v6pvp7q')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('zaydan', '01jqj1hrcam3j4vp1x5v6pvp7q')->get()
+use Spatie\Tags\Tag;
+$search = 'tes';
+
+
+
+
+Question::withAnyTags('zaydan', '01jqj1hrcam3j4vp1x5v6pvp7q')->get()
