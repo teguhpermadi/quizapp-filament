@@ -8,12 +8,13 @@ use Livewire\Component;
 
 class ParagraphQuestion extends Component
 {
-    public $paragraph, $questions;
+    public $paragraph, $questions, $exam;
 
-    public function mount($paragraph, $questions)
+    public function mount($paragraph, $questions, $exam)
     {
         $this->paragraph = $paragraph;
         $this->questions = $questions;
+        $this->exam = $exam;
     }
     public function render()
     {

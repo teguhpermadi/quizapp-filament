@@ -4,6 +4,9 @@ namespace App\Livewire;
 
 use App\Enums\ScoreEnum;
 use App\Enums\TimerEnum;
+use App\Filament\Resources\ExamResource\Pages\ExamQuestion;
+use App\Models\Exam;
+use App\Models\ExamQuestionParagraph;
 use App\Models\Question;
 use Filament\Notifications\Notification;
 use Livewire\Component;
@@ -13,16 +16,19 @@ class ViewQuestion extends Component
     public $question;
     public $score;
     public $timer;
+    public $questionId;
+    public $examId;
+    public $visible = true;
 
-    public function mount($question)
+    public function mount($question, $exam)
     {
         $this->question = $question;
         $this->score = $question->score;
         $this->timer = $question->timer;
+        $this->questionId = $question->id;
+        $this->examId = $exam->id;
     }
-
-    // app/Livewire/ViewQuestion.php
-
+    
     public function updatedScore($score)
     {
         // Update the score in the database or perform any other necessary action
@@ -53,9 +59,13 @@ class ViewQuestion extends Component
         $this->emit('editQuestion', $questionId);
     }
 
-    public function deleteQuestion($questionId)
+    public function deleteQuestion()
     {
-        $this->emit('deleteQuestion', $questionId);
+        ExamQuestionParagraph::where('exam_id', $this->examId)
+            ->where('question_id', $this->questionId)
+            ->delete();
+
+        $this->visible = false;
     }
 
     public function render()

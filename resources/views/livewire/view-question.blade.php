@@ -1,5 +1,14 @@
 <div>
-    <div class="bg-white border border-gray-300 rounded-lg p-4 w-full">
+    <div class="bg-white border border-gray-300 rounded-lg p-4 w-full" 
+        x-data="{ open: $wire.entangle('visible') }"
+        x-show="open"
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 scale-90"
+        x-transition:enter-end="opacity-100 scale-100"
+        x-transition:leave="transition ease-in duration-300"
+        x-transition:leave-start="opacity-100 scale-100"
+        x-transition:leave-end="opacity-0 scale-90"
+    >
         <div class="flex justify-between items-center">
             <div class="flex items-center space-x-2 gap-2">
                 <!-- tampilkan tipe soal -->
@@ -10,7 +19,7 @@
                     <label for="score" class="text-gray-600">Score:</label>
                     <select wire:model.live="score" wire:loading.class="opacity-50" wire:loading.attr="disabled" id="score_{{$question->id}}" class="border rounded-md px-2 py-1 text-sm text-gray-600 !bg-none">
                         @foreach ($scores as $scoreEnum)
-                            <option value="{{ $scoreEnum->value }}">{{ $scoreEnum->getLabel() }}</option>
+                        <option value="{{ $scoreEnum->value }}">{{ $scoreEnum->getLabel() }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -19,7 +28,7 @@
                     <label for="time" class="text-gray-600">Time:</label>
                     <select wire:model.live="timer" wire:loading.class="opacity-50" wire:loading.attr="disabled" id="time_{{$question->id}}" class="border rounded-md px-2 py-1 text-sm text-gray-600 !bg-none">
                         @foreach ($timers as $timerEnum)
-                            <option value="{{ $timerEnum->value }}">{{ $timerEnum->getLabel() }}</option>
+                        <option value="{{ $timerEnum->value }}">{{ $timerEnum->getLabel() }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -32,8 +41,13 @@
                 </div>
                 <!-- tampilkan tombol hapus -->
                 <div class="flex items-center space-x-2">
-                    <button wire:click="deleteQuestion({{$question->id}})"
-                        class="border rounded-md px-2 py-1 text-sm">Delete</button>
+                    <form wire:submit="deleteQuestion">
+                        <input type="hidden" wire:model="questionId">
+                        <input type="hidden" wire:model="examId">
+                        <x-filament::button color="danger" type="submit" size="xs" wire:target="deleteQuestion">
+                            Delete
+                        </x-filament::button>
+                    </form>
                 </div>
             </div>
         </div>

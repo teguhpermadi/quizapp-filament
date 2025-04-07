@@ -1,413 +1,105 @@
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get();
-
-
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get();
-
-
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get();
-
-
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get();
-
-
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get();
-
-
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get();
-
-
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get();
-
-
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get();
-
-
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
-
-
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
-
-
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
-
-
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
-
-
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
-
-
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
-
-
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
-
-
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
-
-
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
-
-
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
-
-
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
-
-
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
-
-
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-Tag::withType('01jqj1hrcam3j4vp1x5v6pvp7q')->get()->pluck('name');
-
-
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('tes')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('tess')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('tess')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('tess')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('tess')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('tess')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('tess')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('tess')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('tess')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('tess')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('tess')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('tess')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTag('tess')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('tess')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags(['tess'])->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags(['tess'])->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags(['tess'])->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags(['tes'])->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags(['withAnyTags'])->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags(['tes'])->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags(['tes'])->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags(['tes'])->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags(['tes'], '01jqj1hrcam3j4vp1x5v6pvp7q')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('tes', '01jqj1hrcam3j4vp1x5v6pvp7q')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('tess', '01jqj1hrcam3j4vp1x5v6pvp7q')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('tess', '01jqj1hrcam3j4vp1x5v6pvp7q')->count()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('tess', '01jqj1hrcam3j4vp1x5v6pvp7q')->count()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('tess', '01jqj1hrcam3j4vp1x5v6pvp7q')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('zaydan', '01jqj1hrcam3j4vp1x5v6pvp7q')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('zaydan', '01jqj1hrcam3j4vp1x5v6pvp7q')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('zaydan', '01jqj1hrcam3j4vp1x5v6pvp7q')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('zaydan', '01jqj1hrcam3j4vp1x5v6pvp7q')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('zaydan', '01jqj1hrcam3j4vp1x5v6pvp7q')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-
-Question::withAnyTags('zaydan', '01jqj1hrcam3j4vp1x5v6pvp7q')->get()
-use Spatie\Tags\Tag;
-$search = 'tes';
-
-
-
-Tag::query()->where('name->en', 'LIKE', "%{$search}%")->get()
-
-use Spatie\Tags\Tag;
-$search = 'zaydan';
-
-
-
-Tag::query()->where('name->en', 'LIKE', "%{$search}%")->get()
-
-use Spatie\Tags\Tag;
-$search = 'zaydan';
-
-
-
-Tag::query()->where('name->en', 'LIKE', "%{$search}%")->get()->pluck('name')
-
-use Spatie\Tags\Tag;
-$search = 'zaydan';
-
-Tag::get();
-
-
-
+$test = collect([1,2,3,4,5]);
+$test = collect([1,2,3,4,5]);
+$test->slice(2);
+$test = collect([1,2,3,4,5]);
+$test->filter(2);
+$collection = collect([1, 2, 3, 4]);
+ 
+$filtered = $collection->filter(function (int $value, int $key) {
+    return $value > 2;
+});
+ 
+$filtered->all();
+$collection = collect([1, 2, 3, 4]);
+ 
+$filtered = $collection->filter(function (int $value, int $key) {
+    return $value > 2;
+});
+ 
+$filtered->all();
+
+$collection
+$collection = collect([1, 2, 3, 4]);
+ 
+$filtered = $collection->filter(function (int $value, int $key) {
+    return $value > 2;
+});
+ 
+$filtered->all();
+
+
+$collection = collect([1, 2, 3, 4]);
+ 
+$filtered = $collection->reject(function (int $value, int $key) {
+    return $value > 2;
+});
+ 
+$filtered->all();
+$collection = collect([1, 2, 3, 4]);
+ 
+$filtered = $collection->reject(function (int $value, int $key) {
+    return $value == 2;
+});
+ 
+$filtered->all();
+$collection = collect([1 => 'a', 2 => 'b', 3 => 'c', 4 => 'd']);
+ 
+$filtered = $collection->reject(function (int $value, int $key) {
+    return $value == 2;
+});
+ 
+$filtered->all();
+$collection = collect([1 => 'a', 2 => 'b', 3 => 'c', 4 => 'd']);
+ 
+$filtered = $collection->reject(function (int $value, int $key) {
+    return $value === 'a';
+});
+ 
+$filtered->all();
+$collection = collect([1 => 'a', 2 => 'b', 3 => 'c', 4 => 'd']);
+ 
+$filtered = $collection->reject(function (int $value, int $key) {
+    return $value === 'a';
+});
+ 
+$filtered->all();
+$collection = collect([1 => 'a', 2 => 'b', 3 => 'c', 4 => 'd']);
+ 
+$filtered = $collection->reject(function (int $value, int $key) {
+    return $value == 'a';
+});
+ 
+$filtered->all();
+$collection = collect([1 => 'a', 2 => 'b', 3 => 'c', 4 => 'd']);
+ 
+$filtered = $collection->reject(function (int $value, int $key) {
+    return $value == 'a';
+});
+ 
+$filtered->all();
+$collection = collect([1 => 'a', 2 => 'b', 3 => 'c', 4 => 'd']);
+ 
+$filtered = $collection->reject(function (int $value, int $key) {
+    return $value == 'a';
+});
+ 
+$filtered->all();
+$collection = collect([1 => 'a', 2 => 'b', 3 => 'c', 4 => 'd']);
+ 
+$filtered = $collection->reject(function (int $value, int $key) {
+    return $value == 'a';
+});
+ 
+$filtered->all();
+$collection = collect([1 => 'a', 2 => 'b', 3 => 'c', 4 => 'd']);
+ 
+$filtered = $collection->reject(function (int $value, int $key) {
+    return $value == 'a';
+});
+ 
+$filtered->all();
+$collection = collect([1 => 'a', 2 => 'b', 3 => 'c', 4 => 'd']);
+
+$updatedCollection = $collection->reject(function ($value, $key) {
+    return $value === 'a';
+});
