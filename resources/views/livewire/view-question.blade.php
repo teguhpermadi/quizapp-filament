@@ -1,5 +1,5 @@
 <div>
-    <div class="bg-white border border-gray-300 rounded-lg p-4 w-full" 
+    <div class="bg-white border border-gray-300 rounded-lg p-4 w-full"
         x-data="{ open: $wire.entangle('visible') }"
         x-show="open"
         x-transition:enter="transition ease-out duration-300"
@@ -7,10 +7,9 @@
         x-transition:enter-end="opacity-100 scale-100"
         x-transition:leave="transition ease-in duration-300"
         x-transition:leave-start="opacity-100 scale-100"
-        x-transition:leave-end="opacity-0 scale-90"
-    >
+        x-transition:leave-end="opacity-0 scale-90">
         <div class="flex justify-between items-center">
-            <div class="flex items-center space-x-2 gap-2">
+            <div class="hidden md:flex items-center space-x-2 gap-2">
                 <!-- tampilkan tipe soal -->
                 <span class="border rounded-md px-2 py-1 text-sm text-gray-600">Type: {{Str::ucwords($question->question_type)}}</span>
                 <!-- tampilkan score -->
@@ -33,7 +32,7 @@
                     </select>
                 </div>
             </div>
-            <div class="flex items-center space-x-2">
+            <div class="hidden md:flex items-center space-x-2">
                 <!-- tampilkan tombol edit -->
                 <div class="flex items-center space-x-2">
                     <button wire:click="editQuestion({{$question->id}})"
@@ -48,6 +47,22 @@
                             Delete
                         </x-filament::button>
                     </form>
+                </div>
+            </div>
+            <div class="md:hidden flex items-center space-x-2 gap-2" x-data="{ showMenu: false }">
+                <!-- tombol edit dan delete pada ukuran layar kecil -->
+                <button class="bg-gray-300 hover:bg-gray-400 text-gray-600 font-bold py-2 px-4 rounded" @click="showMenu = !showMenu" x-ref="button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                <div x-show="showMenu" @click.away="showMenu = false" x-transition x-anchor.offset.2="$refs.button" class="absolute right-0 mt-2 w-24 bg-white rounded-md shadow-md">
+                    <button wire:click="editQuestion" class="block w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 hover:rounded-t-md">
+                        Edit
+                    </button>
+                    <button wire:click="deleteQuestion" class="block w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 hover:rounded-b-md">
+                        Delete
+                    </button>
                 </div>
             </div>
         </div>
