@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enums\StatusEnum;
 use App\Models\Teacher;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -22,6 +23,7 @@ class ExamFactory extends Factory
             'title' => fake()->sentence(4),
             'image' => fake()->imageUrl(),
             'description' => fake()->paragraph(),
+            'status' => fake()->randomElement(StatusEnum::cases())->value,
         ];
     }
 }

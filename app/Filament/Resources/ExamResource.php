@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Enums\QuestionTypeEnum;
+use App\Enums\StatusEnum;
 use App\Filament\Resources\ExamResource\Pages;
 use App\Filament\Resources\ExamResource\RelationManagers;
 use App\Filament\Resources\ExamResource\RelationManagers\QuestionRelationManager;
@@ -19,6 +20,7 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Actions\Action;
+use Filament\Tables\Columns\SelectColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
@@ -87,13 +89,19 @@ class ExamResource extends Resource
                     ->sortable(),
                 TextColumn::make('questions_count')
                     ->counts('questions')
+                    ->sortable()
                     ->label('Questions'),
+                SelectColumn::make('status')
+                    ->label('Status')
+                    ->options(StatusEnum::class)
+                    ->sortable()
+                    ->searchable(),
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                // Tables\Actions\EditAction::make(),
                 Action::make('questions')
                     ->label('Questions')
                     ->url(fn(Exam $exam) => route('filament.admin.resources.exams.question', $exam)),
@@ -117,7 +125,7 @@ class ExamResource extends Resource
         return [
             'index' => Pages\ListExams::route('/'),
             'create' => Pages\CreateExam::route('/create'),
-            'edit' => Pages\EditExam::route('/{record}/edit'),
+            // 'edit' => Pages\EditExam::route('/{record}/edit'),
             'question' => Pages\ExamQuestion::route('/{record}/question'),
         ];
     }

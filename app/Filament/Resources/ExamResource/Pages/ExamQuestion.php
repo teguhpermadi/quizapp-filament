@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\ExamResource\Pages;
 
+use App\Enums\StatusEnum;
 use App\Filament\Resources\ExamResource;
 use App\Models\Exam;
 use App\Models\ExamQuestionParagraph;
@@ -16,9 +17,9 @@ class ExamQuestion extends Page implements HasForms
 {
     use InteractsWithForms;
     use InteractsWithRecord;
-
+    
     public ?array $data = [];
-    public $tes;
+    public $titleName;
 
     protected static string $resource = ExamResource::class;
 
@@ -28,8 +29,12 @@ class ExamQuestion extends Page implements HasForms
     {
         $this->record = $this->resolveRecord($record);
 
+        // ubah status menjadi draft
+        $this->record->status = StatusEnum::DRAFT->value;
+        $this->record->save();
+
         $this->form->fill([
-            'tes' => 'tes',
+            'titleName' => $this->record->title,
         ]);
     }
 
@@ -37,8 +42,9 @@ class ExamQuestion extends Page implements HasForms
     {
         return $form
             ->schema([
-                TextInput::make('tes')
+                TextInput::make('titleName')
                     ->required(),
-            ]);
+            ])
+            ->statePath('data');
     }
 }

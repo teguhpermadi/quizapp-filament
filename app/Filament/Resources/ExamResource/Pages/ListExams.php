@@ -5,6 +5,8 @@ namespace App\Filament\Resources\ExamResource\Pages;
 use App\Filament\Resources\ExamResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
+use Filament\Resources\Components\Tab;
+use Illuminate\Database\Eloquent\Builder;
 
 class ListExams extends ListRecords
 {
@@ -14,6 +16,18 @@ class ListExams extends ListRecords
     {
         return [
             Actions\CreateAction::make(),
+        ];
+    }
+
+    public function getTabs(): array
+    {
+        return [
+            'published' => Tab::make()
+                ->label(__('Published'))
+                ->modifyQueryUsing(fn(Builder $query) => $query->where('status', 'published')),
+            'draft' => Tab::make()
+                ->label(__('Draft'))
+                ->modifyQueryUsing(fn(Builder $query) => $query->where('status', 'draft')),
         ];
     }
 }
