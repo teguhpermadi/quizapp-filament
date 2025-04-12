@@ -10,6 +10,8 @@ class EditExam extends EditRecord
 {
     protected static string $resource = ExamResource::class;
 
+    protected static string $view = 'filament.resources.exam-resource.pages.edit-exam';
+
     protected function getHeaderActions(): array
     {
         return [
