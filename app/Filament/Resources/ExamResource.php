@@ -125,7 +125,8 @@ class ExamResource extends Resource
         return [
             'index' => Pages\ListExams::route('/'),
             'create' => Pages\CreateExam::route('/create'),
-            // 'edit' => Pages\EditExam::route('/{record}/edit'),
+            'view' => Pages\ViewExam::route('/{record}'),
+            'edit' => Pages\EditExam::route('/{record}/edit'),
             'question' => Pages\ExamQuestion::route('/{record}/question'),
         ];
     }
