@@ -9,5 +9,4 @@
 
     @livewire('exam-question-livewire', ['exam' => $this->record])
     @livewire('view-paragraph')
-    @livewire('view-explanation')
 </x-filament-panels::page>

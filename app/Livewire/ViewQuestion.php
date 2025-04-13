@@ -19,6 +19,9 @@ class ViewQuestion extends Component
     public $questionId;
     public $examId;
     public $visible = true;
+    public string $fullText;
+    public bool $isExpanded = false;
+    public int $truncateLength = 100;
 
     public function mount($question, $exam)
     {
@@ -47,11 +50,6 @@ class ViewQuestion extends Component
             ->title('Timer Updated!')
             ->success()
             ->send();
-    }
-
-    public function viewExplanation($questionId)
-    {
-        $this->dispatch('view-explanation', $questionId);
     }
 
     public function editQuestion($questionId)

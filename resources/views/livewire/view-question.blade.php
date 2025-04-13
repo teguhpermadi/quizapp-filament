@@ -15,7 +15,7 @@
                 <!-- tampilkan score -->
                 <div class="px-2 py-1">
                     <!-- buatkan class dari taildwind yang bagus untuk label dan select score berikut ini -->
-                    <label for="score" class="text-gray-600">Score:</label>
+                    <label for="score_{{$question->id}}" class="text-gray-600">Score:</label>
                     <select wire:model.live="score" wire:loading.class="opacity-50" wire:loading.attr="disabled" id="score_{{$question->id}}" class="border rounded-md px-2 py-1 text-sm text-gray-600 !bg-none">
                         @foreach ($scores as $scoreEnum)
                         <option value="{{ $scoreEnum->value }}">{{ $scoreEnum->getLabel() }}</option>
@@ -24,7 +24,7 @@
                 </div>
                 <!-- tampilkan waktu -->
                 <div class="px-2 py-1">
-                    <label for="time" class="text-gray-600">Time:</label>
+                    <label for="time_{{$question->id}}" class="text-gray-600">Time:</label>
                     <select wire:model.live="timer" wire:loading.class="opacity-50" wire:loading.attr="disabled" id="time_{{$question->id}}" class="border rounded-md px-2 py-1 text-sm text-gray-600 !bg-none">
                         @foreach ($timers as $timerEnum)
                         <option value="{{ $timerEnum->value }}">{{ $timerEnum->getLabel() }}</option>
@@ -52,7 +52,7 @@
             <div class="md:hidden flex items-center space-x-2 gap-2" x-data="{ showMenu: false }">
                 <!-- tombol edit dan delete pada ukuran layar kecil -->
                 <button class="bg-gray-300 hover:bg-gray-400 text-gray-600 font-bold py-2 px-4 rounded" @click="showMenu = !showMenu" x-ref="button">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" >
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
@@ -101,8 +101,7 @@
         <div class="border-t mt-2"></div>
         <div class="mt-2">
             <p class="text-sm text-gray-600">Explanation</p>
-            <p class="text-sm">{{ Str::limit($question->explanation, 100) }}</p>
-            <button class="no-underline hover:underline text-sm text-gray-600" wire:click="viewExplanation('{{ $question->id }}')">More Explanation</button>
+            <button class="no-underline hover:underline text-sm text-gray-600">More Explanation</button>
         </div>
         <div class="border-t mt-2"></div>
         <div class="mt-2">
