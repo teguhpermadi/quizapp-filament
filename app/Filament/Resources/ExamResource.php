@@ -101,10 +101,10 @@ class ExamResource extends Resource
                 //
             ])
             ->actions([
-                // Tables\Actions\EditAction::make(),
-                Action::make('questions')
-                    ->label('Questions')
-                    ->url(fn(Exam $exam) => route('filament.admin.resources.exams.question', $exam)),
+                Tables\Actions\EditAction::make(),
+                // Action::make('questions')
+                //     ->label('Questions')
+                //     ->url(fn(Exam $exam) => route('filament.admin.resources.exams.question', $exam)),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -127,7 +127,7 @@ class ExamResource extends Resource
             'create' => Pages\CreateExam::route('/create'),
             'view' => Pages\ViewExam::route('/{record}'),
             'edit' => Pages\EditExam::route('/{record}/edit'),
-            'question' => Pages\ExamQuestion::route('/{record}/question'),
+            // 'question' => Pages\ExamQuestion::route('/{record}/question'),
         ];
     }
 }

@@ -15,11 +15,11 @@ class ViewExam extends ViewRecord
     protected function getHeaderActions(): array
     {
         return [
-            Actions\Action::make('edit question')
-                ->label('Edit Question')
-                ->url(function () {
-                    return $this->getResource()::getUrl('question', ['record' => $this->getRecord()]);
-                }),
+            // Actions\Action::make('edit question')
+            //     ->label('Edit Question')
+            //     ->url(function () {
+            //         return $this->getResource()::getUrl('question', ['record' => $this->getRecord()]);
+            //     }),
             Actions\EditAction::make(),
         ];
     }
