@@ -28,7 +28,7 @@ class QuestionFactory extends Factory
             'question' => fake()->realText(),
             'question_type' => fake()->randomElement(QuestionTypeEnum::class),
             'image' => $faker->imageUrl(),
-            'explanation' => fake()->realText(),
+            'explanation' => fake()->realText(50),
             'score' => fake()->randomElement(ScoreEnum::class),
             'timer' => fake()->randomElement(TimerEnum::class),
             'level' => fake()->randomElement(['easy', 'medium', 'hard']),

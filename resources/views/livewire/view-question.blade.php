@@ -101,7 +101,8 @@
         <div class="border-t mt-2"></div>
         <div class="mt-2">
             <p class="text-sm text-gray-600">Explanation</p>
-            <button class="no-underline hover:underline text-sm text-gray-600">More Explanation</button>
+            <!-- <button class="no-underline hover:underline text-sm text-gray-600">More Explanation</button> -->
+            @livewire('toggle-text', ['text' => $question->explanation, 'limit'=> 100])
         </div>
         <div class="border-t mt-2"></div>
         <div class="mt-2">
