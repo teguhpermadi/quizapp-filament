@@ -56,6 +56,7 @@ class AdminPanelProvider extends PanelProvider
                 Authenticate::class,
             ])
             ->login(Login::class)
+            ->spa()
             ->plugin(FilamentSpatieRolesPermissionsPlugin::make())
             ->viteTheme('resources/css/filament/admin/theme.css');
     }
