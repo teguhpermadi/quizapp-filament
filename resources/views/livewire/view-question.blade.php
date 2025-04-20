@@ -35,8 +35,7 @@
             <div class="hidden md:flex items-center space-x-2">
                 <!-- tampilkan tombol edit -->
                 <div class="flex items-center space-x-2">
-                    <button wire:click="editQuestion({{$question->id}})"
-                        class="border rounded-md px-2 py-1 text-sm">Edit</button>
+                    <a href="{{route('filament.admin.resources.questions.edit', ['record' => $question->id])}}" wire:navigate class="border rounded-md px-2 py-1 text-sm">Edit</a>
                 </div>
                 <!-- tampilkan tombol hapus -->
                 <div class="flex items-center space-x-2">
@@ -57,8 +56,8 @@
                     </svg>
                 </button>
                 <div x-show="showMenu" @click.away="showMenu = false" x-transition x-anchor.offset.2="$refs.button" class="absolute right-0 mt-2 w-24 bg-white rounded-md shadow-md">
-                    <button wire:click="editQuestion" class="block w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 hover:rounded-t-md">
-                        Edit
+                    <button class="block w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 hover:rounded-t-md">
+                        <a href="{{route('filament.admin.resources.questions.edit', ['record' => $question->id])}}">Edit</a>
                     </button>
                     <button wire:click="deleteQuestion" class="block w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 hover:rounded-b-md">
                         Delete

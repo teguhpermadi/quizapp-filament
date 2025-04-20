@@ -52,9 +52,9 @@ class ViewQuestion extends Component
             ->send();
     }
 
-    public function editQuestion($questionId)
+    public function editQuestion()
     {
-        $this->emit('editQuestion', $questionId);
+        dd($this->questionId);
     }
 
     public function deleteQuestion()
