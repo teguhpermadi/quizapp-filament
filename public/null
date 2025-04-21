@@ -1,1 +1,2 @@
-Exam::get()
+Question::find('01jrz814peca6f3bsgkstd0e9n');
+Question::find('01jrz814peca6f3bsgkstd0e9n');

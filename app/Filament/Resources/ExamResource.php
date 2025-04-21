@@ -127,7 +127,7 @@ class ExamResource extends Resource
             'create' => Pages\CreateExam::route('/create'),
             'view' => Pages\ViewExam::route('/{record}'),
             'edit' => Pages\EditExam::route('/{record}/edit'),
-            // 'question' => Pages\ExamQuestion::route('/{record}/question'),
+            'question' => Pages\EditQuestionExam::route('/{exam}/exam/{record}/question'),
         ];
     }
 }
