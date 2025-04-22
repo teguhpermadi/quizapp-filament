@@ -4,7 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 
-class MatchingAnswer extends Component
+class ViewMatchingAnswer extends Component
 {
     public $answers;
 
@@ -16,6 +16,6 @@ class MatchingAnswer extends Component
 
     public function render()
     {
-        return view('livewire.matching-answer');
+        return view('livewire.view-matching-answer');
     }
 }

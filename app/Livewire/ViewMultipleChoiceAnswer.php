@@ -4,7 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 
-class MultipleChoiceAnswer extends Component
+class ViewMultipleChoiceAnswer extends Component
 {
     public $answers;
 
@@ -14,6 +14,6 @@ class MultipleChoiceAnswer extends Component
     }
     public function render()
     {
-        return view('livewire.multiple-choice-answer');
+        return view('livewire.view-multiple-choice-answer');
     }
 }

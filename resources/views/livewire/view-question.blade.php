@@ -67,31 +67,30 @@
         </div>
 
         <div class="mt-2">
-            <p>{{$question->timer}}</p>
             <p class="text-md">{{$question->question}}</p>
         </div>
         <div class="mt-2">
             @switch($question->question_type)
             @case('multiple choice')
-            @livewire('multiple-choice-answer', ['question' => $question])
+            @livewire('view-multiple-choice-answer', ['question' => $question])
             @break
             @case('multiple answer')
-            @livewire('multiple-choice-answer', ['question' => $question])
+            @livewire('view-multiple-choice-answer', ['question' => $question])
             @break
             @case('true false')
-            @livewire('multiple-choice-answer', ['question' => $question])
+            @livewire('view-multiple-choice-answer', ['question' => $question])
             @break
             @case('matching')
-            @livewire('matching-answer', ['question' => $question])
+            @livewire('view-matching-answer', ['question' => $question])
             @break
             @case('ordering')
-            @livewire('ordering-answer', ['question' => $question])
+            @livewire('view-ordering-answer', ['question' => $question])
             @break
             @case('short answer')
-            @livewire('short-answer', ['question' => $question])
+            @livewire('view-short-answer', ['question' => $question])
             @break
             @case('essay')
-            @livewire('short-answer', ['question' => $question])
+            @livewire('view-short-answer', ['question' => $question])
             @break
             @default
             <p>Bukan soal multiple choice</p>

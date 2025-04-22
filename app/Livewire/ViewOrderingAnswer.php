@@ -4,7 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 
-class OrderingAnswer extends Component
+class ViewOrderingAnswer extends Component
 {
     public $answers;
 
@@ -15,6 +15,6 @@ class OrderingAnswer extends Component
 
     public function render()
     {
-        return view('livewire.ordering-answer');
+        return view('livewire.view-ordering-answer');
     }
 }
