@@ -24,8 +24,8 @@
                 </div>
                 <!-- tampilkan waktu -->
                 <div class="px-2 py-1">
-                    <label for="time_{{$question->id}}" class="text-gray-600">Time:</label>
-                    <select wire:model.live="timer" wire:loading.class="opacity-50" wire:loading.attr="disabled" id="time_{{$question->id}}" class="border rounded-md px-2 py-1 text-sm text-gray-600 !bg-none">
+                    <label for="timer_{{$question->id}}" class="text-gray-600">Time:</label>
+                    <select wire:model.live="timer" wire:loading.class="opacity-50" wire:loading.attr="disabled" id="timer_{{$question->id}}" class="border rounded-md px-2 py-1 text-sm text-gray-600 !bg-none">
                         @foreach ($timers as $timerEnum)
                         <option value="{{ $timerEnum->value }}">{{ $timerEnum->getLabel() }}</option>
                         @endforeach
@@ -67,6 +67,7 @@
         </div>
 
         <div class="mt-2">
+            <p>{{$question->timer}}</p>
             <p class="text-md">{{$question->question}}</p>
         </div>
         <div class="mt-2">

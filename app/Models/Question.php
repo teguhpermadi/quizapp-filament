@@ -30,12 +30,13 @@ class Question extends Model
 
     protected $casts = [
         'score' => 'integer',
+        'timer' => 'integer',
     ];
 
-    public function getTimerAttribute()
-    {
-        return Carbon::createFromTimestampMs($this->attributes['timer'])->timestamp;
-    }
+    // public function getTimerAttribute()
+    // {
+    //     return Carbon::createFromTimestampMs($this->attributes['timer'])->timestamp;
+    // }
 
     public function teacher()
     {

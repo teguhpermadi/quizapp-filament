@@ -2,7 +2,9 @@
 
 namespace App\Enums;
 
-enum TimerEnum: string implements \Filament\Support\Contracts\HasLabel
+use Filament\Support\Contracts\HasLabel;
+
+enum TimerEnum: string implements HasLabel
 {
     case TIMER_5 = '500';
     case TIMER_10 = '1000';
